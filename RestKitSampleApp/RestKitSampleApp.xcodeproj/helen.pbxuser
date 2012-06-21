@@ -42,6 +42,7 @@
 		indexTemplatePath = "";
 	};
 	79908BF61593B145006A24E5 /* Project object */ = {
+		activeArchitecturePreference = ppc;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 79873DC41593B9BB00E84EEA /* RestKitSampleApp */;
 		activeTarget = 79908BFE1593B145006A24E5 /* RestKitSampleApp */;

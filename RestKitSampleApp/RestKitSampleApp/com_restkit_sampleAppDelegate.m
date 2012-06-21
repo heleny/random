@@ -7,6 +7,7 @@
 //
 
 #import "com_restkit_sampleAppDelegate.h"
+#import "RestKit/RestKit.h"
 
 @implementation com_restkit_sampleAppDelegate
 

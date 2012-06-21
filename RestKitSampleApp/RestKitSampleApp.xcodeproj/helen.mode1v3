@@ -294,7 +294,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1129 372 1454 910 0 0 2560 1418 </string>
+						<string>879 353 1454 910 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1246, 683}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1129 372 1454 910 0 0 2560 1418 </string>
+								<string>879 353 1454 910 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -351,7 +351,7 @@
 								<key>Frame</key>
 								<string>{{0, 688}, {1246, 181}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1129 372 1454 910 0 0 2560 1418 </string>
+								<string>879 353 1454 910 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -519,7 +519,7 @@
 		<string>/Users/helen/dev/random/RestKitSampleApp/RestKitSampleApp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>1129 372 1454 910 0 0 2560 1418 </string>
+	<string>879 353 1454 910 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
