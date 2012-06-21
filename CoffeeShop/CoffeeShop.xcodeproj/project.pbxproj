@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79908C641593C11E006A24E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C631593C11E006A24E5 /* UIKit.framework */; };
+		79908C661593C11E006A24E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C651593C11E006A24E5 /* Foundation.framework */; };
+		79908C681593C11E006A24E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C671593C11E006A24E5 /* CoreGraphics.framework */; };
+		79908C6E1593C11E006A24E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79908C6C1593C11E006A24E5 /* InfoPlist.strings */; };
+		79908C701593C11E006A24E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908C6F1593C11E006A24E5 /* main.m */; };
+		79908C741593C11E006A24E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908C731593C11E006A24E5 /* AppDelegate.m */; };
+		79908C771593C11E006A24E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79908C751593C11E006A24E5 /* MainStoryboard.storyboard */; };
+		79908C7A1593C11E006A24E5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908C791593C11E006A24E5 /* MasterViewController.m */; };
+		79908C7D1593C11E006A24E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908C7C1593C11E006A24E5 /* DetailViewController.m */; };
+		79908CC91593C243006A24E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC21593C243006A24E5 /* CFNetwork.framework */; };
+		79908CCA1593C243006A24E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC31593C243006A24E5 /* CoreData.framework */; };
+		79908CCB1593C243006A24E5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC41593C243006A24E5 /* libxml2.dylib */; };
+		79908CCC1593C243006A24E5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC51593C243006A24E5 /* MobileCoreServices.framework */; };
+		79908CCD1593C243006A24E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC61593C243006A24E5 /* QuartzCore.framework */; };
+		79908CCE1593C243006A24E5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC71593C243006A24E5 /* Security.framework */; };
+		79908CCF1593C243006A24E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC81593C243006A24E5 /* SystemConfiguration.framework */; };
+		79908CD01593C24E006A24E5 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CB61593C1FB006A24E5 /* libRestKit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79908CB51593C1FB006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		79908CB71593C1FB006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		79908CB91593C1FB006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		79908CBB1593C1FB006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		79908CBD1593C1FB006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		79908CC01593C205006A24E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79908C5F1593C11E006A24E5 /* CoffeeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79908C631593C11E006A24E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79908C651593C11E006A24E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79908C671593C11E006A24E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79908C6B1593C11E006A24E5 /* CoffeeShop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoffeeShop-Info.plist"; sourceTree = "<group>"; };
+		79908C6D1593C11E006A24E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79908C6F1593C11E006A24E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79908C711593C11E006A24E5 /* CoffeeShop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeShop-Prefix.pch"; sourceTree = "<group>"; };
+		79908C721593C11E006A24E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		79908C731593C11E006A24E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		79908C761593C11E006A24E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		79908C781593C11E006A24E5 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		79908C791593C11E006A24E5 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		79908C7B1593C11E006A24E5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		79908C7C1593C11E006A24E5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		79908C951593C1D0006A24E5 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		79908CC21593C243006A24E5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		79908CC31593C243006A24E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		79908CC41593C243006A24E5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		79908CC51593C243006A24E5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		79908CC61593C243006A24E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79908CC71593C243006A24E5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		79908CC81593C243006A24E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79908C5C1593C11E006A24E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79908CD01593C24E006A24E5 /* libRestKit.a in Frameworks */,
+				79908CC91593C243006A24E5 /* CFNetwork.framework in Frameworks */,
+				79908CCA1593C243006A24E5 /* CoreData.framework in Frameworks */,
+				79908CCB1593C243006A24E5 /* libxml2.dylib in Frameworks */,
+				79908CCC1593C243006A24E5 /* MobileCoreServices.framework in Frameworks */,
+				79908CCD1593C243006A24E5 /* QuartzCore.framework in Frameworks */,
+				79908CCE1593C243006A24E5 /* Security.framework in Frameworks */,
+				79908CCF1593C243006A24E5 /* SystemConfiguration.framework in Frameworks */,
+				79908C641593C11E006A24E5 /* UIKit.framework in Frameworks */,
+				79908C661593C11E006A24E5 /* Foundation.framework in Frameworks */,
+				79908C681593C11E006A24E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79908C541593C11E006A24E5 = {
+			isa = PBXGroup;
+			children = (
+				79908CC21593C243006A24E5 /* CFNetwork.framework */,
+				79908CC31593C243006A24E5 /* CoreData.framework */,
+				79908CC41593C243006A24E5 /* libxml2.dylib */,
+				79908CC51593C243006A24E5 /* MobileCoreServices.framework */,
+				79908CC61593C243006A24E5 /* QuartzCore.framework */,
+				79908CC71593C243006A24E5 /* Security.framework */,
+				79908CC81593C243006A24E5 /* SystemConfiguration.framework */,
+				79908C691593C11E006A24E5 /* CoffeeShop */,
+				79908C621593C11E006A24E5 /* Frameworks */,
+				79908C601593C11E006A24E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79908C601593C11E006A24E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79908C5F1593C11E006A24E5 /* CoffeeShop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79908C621593C11E006A24E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79908C631593C11E006A24E5 /* UIKit.framework */,
+				79908C651593C11E006A24E5 /* Foundation.framework */,
+				79908C671593C11E006A24E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79908C691593C11E006A24E5 /* CoffeeShop */ = {
+			isa = PBXGroup;
+			children = (
+				79908C951593C1D0006A24E5 /* RestKit.xcodeproj */,
+				79908C721593C11E006A24E5 /* AppDelegate.h */,
+				79908C731593C11E006A24E5 /* AppDelegate.m */,
+				79908C751593C11E006A24E5 /* MainStoryboard.storyboard */,
+				79908C781593C11E006A24E5 /* MasterViewController.h */,
+				79908C791593C11E006A24E5 /* MasterViewController.m */,
+				79908C7B1593C11E006A24E5 /* DetailViewController.h */,
+				79908C7C1593C11E006A24E5 /* DetailViewController.m */,
+				79908C6A1593C11E006A24E5 /* Supporting Files */,
+			);
+			path = CoffeeShop;
+			sourceTree = "<group>";
+		};
+		79908C6A1593C11E006A24E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79908C6B1593C11E006A24E5 /* CoffeeShop-Info.plist */,
+				79908C6C1593C11E006A24E5 /* InfoPlist.strings */,
+				79908C6F1593C11E006A24E5 /* main.m */,
+				79908C711593C11E006A24E5 /* CoffeeShop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79908CAE1593C1FB006A24E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79908CB61593C1FB006A24E5 /* libRestKit.a */,
+				79908CB81593C1FB006A24E5 /* RestKitTests.octest */,
+				79908CBA1593C1FB006A24E5 /* RestKit.framework */,
+				79908CBC1593C1FB006A24E5 /* RestKitFrameworkTests.octest */,
+				79908CBE1593C1FB006A24E5 /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79908C5E1593C11E006A24E5 /* CoffeeShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79908C801593C11E006A24E5 /* Build configuration list for PBXNativeTarget "CoffeeShop" */;
+			buildPhases = (
+				79908C5B1593C11E006A24E5 /* Sources */,
+				79908C5C1593C11E006A24E5 /* Frameworks */,
+				79908C5D1593C11E006A24E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79908CC11593C205006A24E5 /* PBXTargetDependency */,
+			);
+			name = CoffeeShop;
+			productName = CoffeeShop;
+			productReference = 79908C5F1593C11E006A24E5 /* CoffeeShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79908C561593C11E006A24E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 79908C591593C11E006A24E5 /* Build configuration list for PBXProject "CoffeeShop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79908C541593C11E006A24E5;
+			productRefGroup = 79908C601593C11E006A24E5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 79908CAE1593C1FB006A24E5 /* Products */;
+					ProjectRef = 79908C951593C1D0006A24E5 /* RestKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				79908C5E1593C11E006A24E5 /* CoffeeShop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		79908CB61593C1FB006A24E5 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 79908CB51593C1FB006A24E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		79908CB81593C1FB006A24E5 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 79908CB71593C1FB006A24E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		79908CBA1593C1FB006A24E5 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 79908CB91593C1FB006A24E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		79908CBC1593C1FB006A24E5 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 79908CBB1593C1FB006A24E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		79908CBE1593C1FB006A24E5 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 79908CBD1593C1FB006A24E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79908C5D1593C11E006A24E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79908C6E1593C11E006A24E5 /* InfoPlist.strings in Resources */,
+				79908C771593C11E006A24E5 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79908C5B1593C11E006A24E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79908C701593C11E006A24E5 /* main.m in Sources */,
+				79908C741593C11E006A24E5 /* AppDelegate.m in Sources */,
+				79908C7A1593C11E006A24E5 /* MasterViewController.m in Sources */,
+				79908C7D1593C11E006A24E5 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79908CC11593C205006A24E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 79908CC01593C205006A24E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79908C6C1593C11E006A24E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79908C6D1593C11E006A24E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		79908C751593C11E006A24E5 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79908C761593C11E006A24E5 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79908C7E1593C11E006A24E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79908C7F1593C11E006A24E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79908C811593C11E006A24E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoffeeShop/CoffeeShop-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				INFOPLIST_FILE = "CoffeeShop/CoffeeShop-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79908C821593C11E006A24E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoffeeShop/CoffeeShop-Prefix.pch";
+				INFOPLIST_FILE = "CoffeeShop/CoffeeShop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79908C591593C11E006A24E5 /* Build configuration list for PBXProject "CoffeeShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79908C7E1593C11E006A24E5 /* Debug */,
+				79908C7F1593C11E006A24E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79908C801593C11E006A24E5 /* Build configuration list for PBXNativeTarget "CoffeeShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79908C811593C11E006A24E5 /* Debug */,
+				79908C821593C11E006A24E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79908C561593C11E006A24E5 /* Project object */;
+}
