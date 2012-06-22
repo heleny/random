@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7947FB301594F3FB0057B816 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB2F1594F3FB0057B816 /* UIKit.framework */; };
+		7947FB321594F3FB0057B816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB311594F3FB0057B816 /* Foundation.framework */; };
+		7947FB341594F3FB0057B816 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB331594F3FB0057B816 /* CoreGraphics.framework */; };
+		7947FB3A1594F3FC0057B816 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7947FB381594F3FC0057B816 /* InfoPlist.strings */; };
+		7947FB3C1594F3FC0057B816 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB3B1594F3FC0057B816 /* main.m */; };
+		7947FB401594F3FC0057B816 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB3F1594F3FC0057B816 /* AppDelegate.m */; };
+		7947FB431594F3FC0057B816 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7947FB411594F3FC0057B816 /* MainStoryboard.storyboard */; };
+		7947FB4E1594F48A0057B816 /* StaticTableViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB4D1594F48A0057B816 /* StaticTableViewControllerViewController.m */; };
+		7947FB531594FA780057B816 /* volvo-s60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7947FB521594FA780057B816 /* volvo-s60.jpg */; };
+		7947FB561594FCBF0057B816 /* bmw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7947FB551594FCBF0057B816 /* bmw.jpg */; };
+		7947FB581594FEED0057B816 /* static_table_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7947FB571594FEED0057B816 /* static_table_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7947FB2B1594F3FB0057B816 /* StaticTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7947FB2F1594F3FB0057B816 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7947FB311594F3FB0057B816 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7947FB331594F3FB0057B816 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7947FB371594F3FC0057B816 /* StaticTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StaticTable-Info.plist"; sourceTree = "<group>"; };
+		7947FB391594F3FC0057B816 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7947FB3B1594F3FC0057B816 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7947FB3D1594F3FC0057B816 /* StaticTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticTable-Prefix.pch"; sourceTree = "<group>"; };
+		7947FB3E1594F3FC0057B816 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7947FB3F1594F3FC0057B816 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7947FB421594F3FC0057B816 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7947FB4C1594F48A0057B816 /* StaticTableViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewControllerViewController.h; sourceTree = "<group>"; };
+		7947FB4D1594F48A0057B816 /* StaticTableViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewControllerViewController.m; sourceTree = "<group>"; };
+		7947FB521594FA780057B816 /* volvo-s60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "volvo-s60.jpg"; path = "res/volvo-s60.jpg"; sourceTree = "<group>"; };
+		7947FB551594FCBF0057B816 /* bmw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bmw.jpg; path = res/bmw.jpg; sourceTree = "<group>"; };
+		7947FB571594FEED0057B816 /* static_table_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = static_table_logo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7947FB281594F3FB0057B816 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7947FB301594F3FB0057B816 /* UIKit.framework in Frameworks */,
+				7947FB321594F3FB0057B816 /* Foundation.framework in Frameworks */,
+				7947FB341594F3FB0057B816 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7947FB201594F3FB0057B816 = {
+			isa = PBXGroup;
+			children = (
+				7947FB571594FEED0057B816 /* static_table_logo.png */,
+				7947FB351594F3FB0057B816 /* StaticTable */,
+				7947FB2E1594F3FB0057B816 /* Frameworks */,
+				7947FB2C1594F3FB0057B816 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7947FB2C1594F3FB0057B816 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7947FB2B1594F3FB0057B816 /* StaticTable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7947FB2E1594F3FB0057B816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7947FB2F1594F3FB0057B816 /* UIKit.framework */,
+				7947FB311594F3FB0057B816 /* Foundation.framework */,
+				7947FB331594F3FB0057B816 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7947FB351594F3FB0057B816 /* StaticTable */ = {
+			isa = PBXGroup;
+			children = (
+				7947FB3E1594F3FC0057B816 /* AppDelegate.h */,
+				7947FB4C1594F48A0057B816 /* StaticTableViewControllerViewController.h */,
+				7947FB4D1594F48A0057B816 /* StaticTableViewControllerViewController.m */,
+				7947FB3F1594F3FC0057B816 /* AppDelegate.m */,
+				7947FB411594F3FC0057B816 /* MainStoryboard.storyboard */,
+				7947FB361594F3FC0057B816 /* Supporting Files */,
+			);
+			path = StaticTable;
+			sourceTree = "<group>";
+		};
+		7947FB361594F3FC0057B816 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7947FB541594FB920057B816 /* resources */,
+				7947FB371594F3FC0057B816 /* StaticTable-Info.plist */,
+				7947FB381594F3FC0057B816 /* InfoPlist.strings */,
+				7947FB3B1594F3FC0057B816 /* main.m */,
+				7947FB3D1594F3FC0057B816 /* StaticTable-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7947FB541594FB920057B816 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7947FB551594FCBF0057B816 /* bmw.jpg */,
+				7947FB521594FA780057B816 /* volvo-s60.jpg */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7947FB2A1594F3FB0057B816 /* StaticTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7947FB491594F3FC0057B816 /* Build configuration list for PBXNativeTarget "StaticTable" */;
+			buildPhases = (
+				7947FB271594F3FB0057B816 /* Sources */,
+				7947FB281594F3FB0057B816 /* Frameworks */,
+				7947FB291594F3FB0057B816 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticTable;
+			productName = StaticTable;
+			productReference = 7947FB2B1594F3FB0057B816 /* StaticTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7947FB221594F3FB0057B816 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7947FB251594F3FB0057B816 /* Build configuration list for PBXProject "StaticTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7947FB201594F3FB0057B816;
+			productRefGroup = 7947FB2C1594F3FB0057B816 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7947FB2A1594F3FB0057B816 /* StaticTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7947FB291594F3FB0057B816 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7947FB3A1594F3FC0057B816 /* InfoPlist.strings in Resources */,
+				7947FB431594F3FC0057B816 /* MainStoryboard.storyboard in Resources */,
+				7947FB531594FA780057B816 /* volvo-s60.jpg in Resources */,
+				7947FB561594FCBF0057B816 /* bmw.jpg in Resources */,
+				7947FB581594FEED0057B816 /* static_table_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7947FB271594F3FB0057B816 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7947FB3C1594F3FC0057B816 /* main.m in Sources */,
+				7947FB401594F3FC0057B816 /* AppDelegate.m in Sources */,
+				7947FB4E1594F48A0057B816 /* StaticTableViewControllerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7947FB381594F3FC0057B816 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7947FB391594F3FC0057B816 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7947FB411594F3FC0057B816 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7947FB421594F3FC0057B816 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7947FB471594F3FC0057B816 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7947FB481594F3FC0057B816 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7947FB4A1594F3FC0057B816 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StaticTable/StaticTable-Prefix.pch";
+				INFOPLIST_FILE = "StaticTable/StaticTable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7947FB4B1594F3FC0057B816 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StaticTable/StaticTable-Prefix.pch";
+				INFOPLIST_FILE = "StaticTable/StaticTable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7947FB251594F3FB0057B816 /* Build configuration list for PBXProject "StaticTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7947FB471594F3FC0057B816 /* Debug */,
+				7947FB481594F3FC0057B816 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7947FB491594F3FC0057B816 /* Build configuration list for PBXNativeTarget "StaticTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7947FB4A1594F3FC0057B816 /* Debug */,
+				7947FB4B1594F3FC0057B816 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7947FB221594F3FB0057B816 /* Project object */;
+}
