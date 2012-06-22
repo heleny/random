@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7947FAEE1594E3120057B816 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FAED1594E3120057B816 /* Stats.m */; };
 		79908C641593C11E006A24E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C631593C11E006A24E5 /* UIKit.framework */; };
 		79908C661593C11E006A24E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C651593C11E006A24E5 /* Foundation.framework */; };
 		79908C681593C11E006A24E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908C671593C11E006A24E5 /* CoreGraphics.framework */; };
@@ -24,6 +25,10 @@
 		79908CCE1593C243006A24E5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC71593C243006A24E5 /* Security.framework */; };
 		79908CCF1593C243006A24E5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CC81593C243006A24E5 /* SystemConfiguration.framework */; };
 		79908CD01593C24E006A24E5 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79908CB61593C1FB006A24E5 /* libRestKit.a */; };
+		79908CD31593CE21006A24E5 /* Venus.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908CD21593CE21006A24E5 /* Venus.m */; };
+		79908CD61594C002006A24E5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908CD51594C002006A24E5 /* Location.m */; };
+		79908CDA1594C76A006A24E5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 79908CD91594C76A006A24E5 /* logo.png */; };
+		79908CDD1594E060006A24E5 /* VenusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79908CDC1594E060006A24E5 /* VenusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7947FAEC1594E3120057B816 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		7947FAED1594E3120057B816 /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
 		79908C5F1593C11E006A24E5 /* CoffeeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79908C631593C11E006A24E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79908C651593C11E006A24E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +102,13 @@
 		79908CC61593C243006A24E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79908CC71593C243006A24E5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		79908CC81593C243006A24E5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		79908CD11593CE21006A24E5 /* Venus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venus.h; sourceTree = "<group>"; };
+		79908CD21593CE21006A24E5 /* Venus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venus.m; sourceTree = "<group>"; };
+		79908CD41594C002006A24E5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		79908CD51594C002006A24E5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		79908CD91594C76A006A24E5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		79908CDB1594E060006A24E5 /* VenusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenusCell.h; sourceTree = "<group>"; };
+		79908CDC1594E060006A24E5 /* VenusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenusCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,7 @@
 		79908C541593C11E006A24E5 = {
 			isa = PBXGroup;
 			children = (
+				79908CD91594C76A006A24E5 /* logo.png */,
 				79908CC21593C243006A24E5 /* CFNetwork.framework */,
 				79908CC31593C243006A24E5 /* CoreData.framework */,
 				79908CC41593C243006A24E5 /* libxml2.dylib */,
@@ -159,6 +174,14 @@
 				79908C951593C1D0006A24E5 /* RestKit.xcodeproj */,
 				79908C721593C11E006A24E5 /* AppDelegate.h */,
 				79908C731593C11E006A24E5 /* AppDelegate.m */,
+				79908CD11593CE21006A24E5 /* Venus.h */,
+				7947FAEC1594E3120057B816 /* Stats.h */,
+				7947FAED1594E3120057B816 /* Stats.m */,
+				79908CDB1594E060006A24E5 /* VenusCell.h */,
+				79908CDC1594E060006A24E5 /* VenusCell.m */,
+				79908CD41594C002006A24E5 /* Location.h */,
+				79908CD51594C002006A24E5 /* Location.m */,
+				79908CD21593CE21006A24E5 /* Venus.m */,
 				79908C751593C11E006A24E5 /* MainStoryboard.storyboard */,
 				79908C781593C11E006A24E5 /* MasterViewController.h */,
 				79908C791593C11E006A24E5 /* MasterViewController.m */,
@@ -289,6 +312,7 @@
 			files = (
 				79908C6E1593C11E006A24E5 /* InfoPlist.strings in Resources */,
 				79908C771593C11E006A24E5 /* MainStoryboard.storyboard in Resources */,
+				79908CDA1594C76A006A24E5 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +327,10 @@
 				79908C741593C11E006A24E5 /* AppDelegate.m in Sources */,
 				79908C7A1593C11E006A24E5 /* MasterViewController.m in Sources */,
 				79908C7D1593C11E006A24E5 /* DetailViewController.m in Sources */,
+				79908CD31593CE21006A24E5 /* Venus.m in Sources */,
+				79908CD61594C002006A24E5 /* Location.m in Sources */,
+				79908CDD1594E060006A24E5 /* VenusCell.m in Sources */,
+				7947FAEE1594E3120057B816 /* Stats.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
