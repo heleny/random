@@ -43,6 +43,7 @@
 //    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
     states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", nil];
 //	self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width/2, self.view.frame.size.height);
+//	self.view.backgroundColor = [UIColor clearColor];
 	
 }
 
