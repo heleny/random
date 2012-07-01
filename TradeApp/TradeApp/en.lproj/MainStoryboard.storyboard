@@ -57,17 +57,9 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-141" y="121"/>
+            <point key="canvasLocation" x="-162" y="15"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="FrontViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FrontViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushExample:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

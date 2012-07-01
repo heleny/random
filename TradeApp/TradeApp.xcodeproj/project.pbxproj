@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27F6AF2D15A0D63100BBE20E /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB8A159503CA0057B816 /* ZUUIRevealController.m */; };
+		27F6AF3015A0EE3200BBE20E /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */; };
 		7947FB6D1595038E0057B816 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB6C1595038E0057B816 /* UIKit.framework */; };
 		7947FB6F1595038E0057B816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB6E1595038E0057B816 /* Foundation.framework */; };
 		7947FB711595038E0057B816 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB701595038E0057B816 /* CoreGraphics.framework */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveViewController.h; sourceTree = "<group>"; };
+		27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveViewController.m; sourceTree = "<group>"; };
 		7947FB681595038E0057B816 /* TradeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7947FB6C1595038E0057B816 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7947FB6E1595038E0057B816 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
+				27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */,
+				27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */,
 				7947FB8A159503CA0057B816 /* ZUUIRevealController.m */,
 				7947FB96159505AD0057B816 /* RearViewController */,
 				7947FB7B1595038E0057B816 /* AppDelegate.h */,
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F6AF2D15A0D63100BBE20E /* ZUUIRevealController.m in Sources */,
 				7947FB791595038E0057B816 /* main.m in Sources */,
 				7947FB7D1595038E0057B816 /* AppDelegate.m in Sources */,
 				7947FB8E159504590057B816 /* FrontViewController.m in Sources */,
@@ -207,6 +214,7 @@
 				7947FB99159505CA0057B816 /* RearViewController.m in Sources */,
 				7947FBA5159519B50057B816 /* ClosingViewController.m in Sources */,
 				7947FBA815951AC70057B816 /* WonViewController.m in Sources */,
+				27F6AF3015A0EE3200BBE20E /* ActiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +291,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TradeApp/TradeApp-Prefix.pch";
 				INFOPLIST_FILE = "TradeApp/TradeApp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -294,7 +304,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TradeApp/TradeApp-Prefix.pch";
 				INFOPLIST_FILE = "TradeApp/TradeApp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

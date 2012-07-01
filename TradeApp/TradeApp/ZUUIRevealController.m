@@ -103,7 +103,8 @@
 
 - (void)_loadDefaultConfiguration
 {
-	self.rearViewRevealWidth = 260.0f;
+//	self.rearViewRevealWidth = 260.0f;
+	self.rearViewRevealWidth = 160.0f;
 	self.maxRearViewRevealOverdraw = 60.0f;
 	self.rearViewPresentationWidth = 320.0f;
 	self.revealViewTriggerWidth = 125.0f;

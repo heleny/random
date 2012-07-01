@@ -10,6 +10,7 @@
 #import "TradeAppViewController.h"
 #import "FrontViewController.h"
 #import "RearViewController.h"
+#import "ActiveViewController.h"
 
 @implementation AppDelegate
 
@@ -20,10 +21,15 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window = window;
 	
-	FrontViewController *frontViewController = [[FrontViewController alloc] init];
 	RearViewController *rearViewController = [[RearViewController alloc] init];
 	
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+	// FrontViewController
+//	FrontViewController *frontViewController = [[FrontViewController alloc] init];
+//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+
+	// ActiveViewController
+	ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
 	
 	TradeAppViewController *tradeAppViewController = [[TradeAppViewController alloc] initWithFrontViewController:navigationController rearViewController:rearViewController];
 	self.viewController = tradeAppViewController;

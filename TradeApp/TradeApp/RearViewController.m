@@ -11,6 +11,7 @@
 #import "TradeAppViewController.h"
 #import "ClosingViewController.h"
 #import "WonViewController.h"
+#import "ActiveViewcontroller.h"
 
 @interface RearViewController ()
 
@@ -41,6 +42,8 @@
     
 //    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
     states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", nil];
+//	self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width/2, self.view.frame.size.height);
+	
 }
 
 - (void)viewDidUnload
@@ -59,24 +62,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [states count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellSeparatorStyleSingleLine reuseIdentifier:cellIdentifier];
+    }
+    
     cell.textLabel.text = [states objectAtIndex:indexPath.row];
     
     return cell;
@@ -129,22 +133,38 @@
 	TradeAppViewController *tradeAppViewController = [self.parentViewController isKindOfClass:[TradeAppViewController class]] ? (TradeAppViewController *)self.parentViewController : nil;
     
 	// Here you'd implement some of your own logic... I simply take for granted that the first row (=0) corresponds to the "FrontViewController".
+	//	if (indexPath.row == 0)
+	//	{
+	//		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
+	//		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[FrontViewController class]])
+	//		{
+	//			FrontViewController *frontViewController = [[FrontViewController alloc] init];
+	//			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+	//			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+	//			
+	//		}
+	//		// Seems the user attempts to 'switch' to exactly the same controller he came from!
+	//		else
+	//		{
+	//			[tradeAppViewController revealToggle:self];
+	//		}
+	//	}
 	if (indexPath.row == 0)
-	{
-		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
-		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[FrontViewController class]])
 		{
-			FrontViewController *frontViewController = [[FrontViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+			// Now let's see if we're not attempting to swap the current ActiveViewController for a new instance of ITSELF, which'd be highly redundant.
+		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveViewController class]])
+			{
+			ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 			
-		}
-		// Seems the user attempts to 'switch' to exactly the same controller he came from!
+			}
+			// Seems the user attempts to 'switch' to exactly the same controller he came from!
 		else
-		{
+			{
 			[tradeAppViewController revealToggle:self];
+			}
 		}
-	}
 	// ... and the second row (=1) corresponds to the "MapViewController".
 	else if (indexPath.row == 1)
 	{
@@ -163,11 +183,13 @@
 	}
 	else if (indexPath.row == 2)
 	{
+		
+		NSLog(@"third row is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
-		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ClosingViewController class]])
+		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[WonViewController class]])
 		{
-			ClosingViewController *closingViewController = [[ClosingViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:closingViewController];
+			WonViewController *wonViewController = [[WonViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:wonViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
 		// Seems the user attempts to 'switch' to exactly the same controller he came from!

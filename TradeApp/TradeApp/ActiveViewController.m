@@ -1,18 +1,18 @@
 //
-//  ClosingViewController.m
+//  ActiveViewController.m
 //  TradeApp
 //
-//  Created by Helen on 12-06-22.
+//  Created by Helen Yang on 12-07-01.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ClosingViewController.h"
+#import "ActiveViewController.h"
 
-@interface ClosingViewController ()
+@interface ActiveViewController ()
 
 @end
 
-@implementation ClosingViewController
+@implementation ActiveViewController
 
 @synthesize data;
 
@@ -28,22 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    data = [NSArray arrayWithObjects:@"2001 Honda", @"1988 Hyundai", @"2010 Kia", @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
+	data = [NSArray arrayWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	
 	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
 		{
 		UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
 		[self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
 		
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Reveal") style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
-		} 
+		}
 }
 
 - (void)viewDidUnload
@@ -69,21 +67,20 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [data count];
+    return data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
-    }
-    
-    // Configure the cell...
-    cell.textLabel.text = [data objectAtIndex:indexPath.row];
-	cell.textLabel.textColor = [UIColor darkGrayColor];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+	}
+	
+	cell.textLabel.text = [data objectAtIndex:indexPath.row];
+	cell.textLabel.textColor = [UIColor blackColor];
     
     return cell;
 }
@@ -133,7 +130,7 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     /*
-//     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];

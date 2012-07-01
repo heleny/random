@@ -18,6 +18,4 @@
 @property (strong, nonatomic) NSArray *arrivedList;
 @property (strong, nonatomic) NSArray *deliveredList;
 
-- (IBAction)pushExample:(id)sender;
-
 @end
