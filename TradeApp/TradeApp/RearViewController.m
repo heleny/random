@@ -12,6 +12,7 @@
 #import "ClosingViewController.h"
 #import "WonViewController.h"
 #import "ActiveViewcontroller.h"
+#import "ActiveTabBarController.h"
 
 @interface RearViewController ()
 
@@ -137,39 +138,43 @@
     // Grab a handle to the reveal controller, as if you'd do with a navigtion controller via self.navigationController.
 	TradeAppViewController *tradeAppViewController = [self.parentViewController isKindOfClass:[TradeAppViewController class]] ? (TradeAppViewController *)self.parentViewController : nil;
     
-	// Here you'd implement some of your own logic... I simply take for granted that the first row (=0) corresponds to the "FrontViewController".
+	// FrontViewController
+    // Here you'd implement some of your own logic... I simply take for granted that the first row (=0) corresponds to the "FrontViewController".
 	//	if (indexPath.row == 0)
 	//	{
-	//		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 	//		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[FrontViewController class]])
 	//		{
 	//			FrontViewController *frontViewController = [[FrontViewController alloc] init];
 	//			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
 	//			[tradeAppViewController setFrontViewController:navigationController animated:NO];
-	//			
 	//		}
-	//		// Seems the user attempts to 'switch' to exactly the same controller he came from!
 	//		else
 	//		{
 	//			[tradeAppViewController revealToggle:self];
 	//		}
 	//	}
-	if (indexPath.row == 0)
-		{
-			// Now let's see if we're not attempting to swap the current ActiveViewController for a new instance of ITSELF, which'd be highly redundant.
-		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveViewController class]])
-			{
-			ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
-			[tradeAppViewController setFrontViewController:navigationController animated:NO];
-			
+    
+    
+	if (indexPath.row == 0) {
+        // FrontViewController
+//        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[FrontViewController class]]) {
+//                FrontViewController *frontViewController = [[FrontViewController alloc] init];
+        
+        // ActiveViewController
+//		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveViewController class]]) {
+//                ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
+            
+        // ActiveTabBarController
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveTabBarController class]]) {
+                ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];    
+    
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeTabBarController];
+                [tradeAppViewController setFrontViewController:navigationController animated:NO];
 			}
-			// Seems the user attempts to 'switch' to exactly the same controller he came from!
-		else
-			{
+		else {
 			[tradeAppViewController revealToggle:self];
-			}
-		}
+        }
+    }
 	// ... and the second row (=1) corresponds to the "MapViewController".
 	else if (indexPath.row == 1)
 	{
