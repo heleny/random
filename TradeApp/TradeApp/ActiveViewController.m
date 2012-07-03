@@ -28,20 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	data = [NSArray arrayWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
+    self.title = @"Active";
+	data = [[NSMutableArray alloc] initWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
-		{
-		UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
-		[self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
+   	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {
+            UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
+            [self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
 		
-		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Reveal") style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
-		}
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Reveal") style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
+    }
 }
 
 - (void)viewDidUnload
@@ -70,6 +65,10 @@
     return data.count;
 }
 
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return @"";
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -81,9 +80,33 @@
 	
 	cell.textLabel.text = [data objectAtIndex:indexPath.row];
 	cell.textLabel.textColor = [UIColor blackColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
+
+-(void) refresh {
+    [self performSelector:@selector(addItem) withObject:nil afterDelay:2.0];
+}
+
+- (void)addItem {
+    // Add a new time
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    NSString *now = [dateFormatter stringFromDate:[NSDate date]];
+    
+    UILabel *footer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 28)];
+    footer.textAlignment = UITextAlignmentCenter;
+    footer.textColor = [UIColor blueColor];
+    footer.text = [NSString stringWithFormat:@"Last updated at %@", now];
+    self.tableView.tableFooterView = footer;
+    
+    [self.tableView reloadData];
+    
+    [self stopLoading];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

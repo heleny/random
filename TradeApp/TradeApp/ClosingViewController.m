@@ -29,7 +29,8 @@
 {
     [super viewDidLoad];
     
-    data = [NSArray arrayWithObjects:@"2001 Honda", @"1988 Hyundai", @"2010 Kia", @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
+    self.title = @"Closed";
+    data = [NSArray arrayWithObjects: @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -84,9 +85,34 @@
     // Configure the cell...
     cell.textLabel.text = [data objectAtIndex:indexPath.row];
 	cell.textLabel.textColor = [UIColor darkGrayColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
+
+-(void) refresh {
+    [self performSelector:@selector(addItem) withObject:nil afterDelay:2.0];
+}
+
+- (void)addItem {
+    // Add a new time
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    NSString *now = [dateFormatter stringFromDate:[NSDate date]];
+    
+    UILabel *footer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 28)];
+    footer.textAlignment = UITextAlignmentCenter;
+    footer.textColor = [UIColor blueColor];
+    footer.text = [NSString stringWithFormat:@"Last updated at %@", now];
+    self.tableView.tableFooterView = footer;
+    
+    [self.tableView reloadData];
+    
+    [self stopLoading];
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

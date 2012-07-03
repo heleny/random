@@ -21,6 +21,10 @@
 		7947FB99159505CA0057B816 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB98159505CA0057B816 /* RearViewController.m */; };
 		7947FBA5159519B50057B816 /* ClosingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FBA4159519B50057B816 /* ClosingViewController.m */; };
 		7947FBA815951AC70057B816 /* WonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FBA715951AC70057B816 /* WonViewController.m */; };
+		79C55B0815A33A050038A5E9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B0715A33A050038A5E9 /* arrow.png */; };
+		79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */; };
+		79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */; };
+		79C55B1915A33DDF0038A5E9 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B1815A33DDF0038A5E9 /* blueArrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +34,7 @@
 		7947FB6C1595038E0057B816 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7947FB6E1595038E0057B816 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7947FB701595038E0057B816 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7947FB741595038E0057B816 /* TradeApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TradeApp-Info.plist"; sourceTree = "<group>"; };
+		7947FB741595038E0057B816 /* TradeApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TradeApp-Info.plist"; path = "TradeApp/TradeApp-Info.plist"; sourceTree = "<group>"; };
 		7947FB761595038E0057B816 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7947FB781595038E0057B816 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7947FB7A1595038E0057B816 /* TradeApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TradeApp-Prefix.pch"; sourceTree = "<group>"; };
@@ -49,6 +53,11 @@
 		7947FBA4159519B50057B816 /* ClosingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClosingViewController.m; sourceTree = "<group>"; };
 		7947FBA615951AC70057B816 /* WonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WonViewController.h; sourceTree = "<group>"; };
 		7947FBA715951AC70057B816 /* WonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WonViewController.m; sourceTree = "<group>"; };
+		79C55B0415A339C10038A5E9 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
+		79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
+		79C55B0715A33A050038A5E9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79C55B1815A33DDF0038A5E9 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueArrow.png; path = ../../EGOTableViewPullRefresh/Demo/TableViewPull/Resources/blueArrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */,
 				7947FB6D1595038E0057B816 /* UIKit.framework in Frameworks */,
 				7947FB6F1595038E0057B816 /* Foundation.framework in Frameworks */,
 				7947FB711595038E0057B816 /* CoreGraphics.framework in Frameworks */,
@@ -68,7 +78,8 @@
 		7947FB5D1595038E0057B816 = {
 			isa = PBXGroup;
 			children = (
-				7947FB721595038E0057B816 /* TradeApp */,
+				7947FB721595038E0057B816 /* Classes */,
+				79C55B0615A339CD0038A5E9 /* Resources */,
 				7947FB6B1595038E0057B816 /* Frameworks */,
 				7947FB691595038E0057B816 /* Products */,
 			);
@@ -85,6 +96,7 @@
 		7947FB6B1595038E0057B816 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */,
 				7947FB6C1595038E0057B816 /* UIKit.framework */,
 				7947FB6E1595038E0057B816 /* Foundation.framework */,
 				7947FB701595038E0057B816 /* CoreGraphics.framework */,
@@ -92,56 +104,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7947FB721595038E0057B816 /* TradeApp */ = {
+		7947FB721595038E0057B816 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
-				27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */,
-				27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */,
-				7947FB8A159503CA0057B816 /* ZUUIRevealController.m */,
-				7947FB96159505AD0057B816 /* RearViewController */,
-				7947FB7B1595038E0057B816 /* AppDelegate.h */,
-				7947FB7C1595038E0057B816 /* AppDelegate.m */,
-				7947FB8F159504B80057B816 /* FrontViewController */,
-				7947FB7E1595038E0057B816 /* MainStoryboard.storyboard */,
-				7947FB731595038E0057B816 /* Supporting Files */,
+				79C55B0415A339C10038A5E9 /* PullRefreshTableViewController.h */,
+				79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */,
 				7947FB93159505700057B816 /* TradeAppViewController.h */,
 				7947FB94159505700057B816 /* TradeAppViewController.m */,
 				7947FBA3159519B50057B816 /* ClosingViewController.h */,
 				7947FBA4159519B50057B816 /* ClosingViewController.m */,
 				7947FBA615951AC70057B816 /* WonViewController.h */,
 				7947FBA715951AC70057B816 /* WonViewController.m */,
+				7947FB8C159504590057B816 /* FrontViewController.h */,
+				7947FB8D159504590057B816 /* FrontViewController.m */,
+				7947FB97159505CA0057B816 /* RearViewController.h */,
+				7947FB98159505CA0057B816 /* RearViewController.m */,
+				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
+				27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */,
+				27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */,
+				7947FB8A159503CA0057B816 /* ZUUIRevealController.m */,
+				7947FB7B1595038E0057B816 /* AppDelegate.h */,
+				7947FB7C1595038E0057B816 /* AppDelegate.m */,
+				7947FB7E1595038E0057B816 /* MainStoryboard.storyboard */,
+				7947FB731595038E0057B816 /* Supporting Files */,
 			);
+			name = Classes;
 			path = TradeApp;
 			sourceTree = "<group>";
 		};
 		7947FB731595038E0057B816 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7947FB741595038E0057B816 /* TradeApp-Info.plist */,
-				7947FB751595038E0057B816 /* InfoPlist.strings */,
 				7947FB781595038E0057B816 /* main.m */,
 				7947FB7A1595038E0057B816 /* TradeApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7947FB8F159504B80057B816 /* FrontViewController */ = {
+		79C55B0615A339CD0038A5E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7947FB8C159504590057B816 /* FrontViewController.h */,
-				7947FB8D159504590057B816 /* FrontViewController.m */,
+				79C55B1815A33DDF0038A5E9 /* blueArrow.png */,
+				79C55B0715A33A050038A5E9 /* arrow.png */,
+				7947FB751595038E0057B816 /* InfoPlist.strings */,
+				7947FB741595038E0057B816 /* TradeApp-Info.plist */,
 			);
-			name = FrontViewController;
-			sourceTree = "<group>";
-		};
-		7947FB96159505AD0057B816 /* RearViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7947FB97159505CA0057B816 /* RearViewController.h */,
-				7947FB98159505CA0057B816 /* RearViewController.m */,
-			);
-			name = RearViewController;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +204,8 @@
 			files = (
 				7947FB771595038E0057B816 /* InfoPlist.strings in Resources */,
 				7947FB801595038E0057B816 /* MainStoryboard.storyboard in Resources */,
+				79C55B0815A33A050038A5E9 /* arrow.png in Resources */,
+				79C55B1915A33DDF0038A5E9 /* blueArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */,
 				27F6AF2D15A0D63100BBE20E /* ZUUIRevealController.m in Sources */,
 				7947FB791595038E0057B816 /* main.m in Sources */,
 				7947FB7D1595038E0057B816 /* AppDelegate.m in Sources */,
@@ -227,6 +238,7 @@
 				7947FB761595038E0057B816 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = TradeApp;
 			sourceTree = "<group>";
 		};
 		7947FB7E1595038E0057B816 /* MainStoryboard.storyboard */ = {
@@ -288,11 +300,15 @@
 		7947FB871595038E0057B816 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TradeApp/TradeApp-Prefix.pch";
 				INFOPLIST_FILE = "TradeApp/TradeApp-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -301,11 +317,15 @@
 		7947FB881595038E0057B816 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TradeApp/TradeApp-Prefix.pch";
 				INFOPLIST_FILE = "TradeApp/TradeApp-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};

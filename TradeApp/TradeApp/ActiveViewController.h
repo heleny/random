@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface ActiveViewController : UITableViewController
+@interface ActiveViewController : PullRefreshTableViewController
 
-@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *data;
 
 @end

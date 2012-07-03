@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface ClosingViewController : UITableViewController
+@interface ClosingViewController : PullRefreshTableViewController
 
 @property (strong, nonatomic) NSArray *data;
 

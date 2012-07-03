@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface WonViewController : UITableViewController
+@interface WonViewController : PullRefreshTableViewController
 
 @property (strong, nonatomic) NSArray *data;
 
