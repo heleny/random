@@ -1,0 +1,112 @@
+html, body, h1, h2, h3, h4, h5, h6, section, header, aside, footer, nav, article, figure, fieldset, p, ul, ol, li, dl, dt, dd, form {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: list-item;
+	list-style: square;
+}
+ol, ol li {
+	list-style: decimal;
+}
+html { background: #a4a4a4 }
+body {
+	background: #a4a4a4 url(bg-body.png) 0 0 repeat-x;
+	color: #111;
+	text-align: left;
+}
+
+#web20 li {
+	padding: 310px 20px;
+	display: block;
+	list-style: none;
+}
+#web20 li a {
+	background: transparent url(icons.png) 100% 0 no-repeat;
+	border: none;
+	color: #848484;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	height: 63px;
+	left: -19px;
+	line-height: 18px;
+	margin: 3px 0;
+	padding-left: 19px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: rgba(0,0,0, 0) 1px 1px 2px;
+	width: 220px;
+	
+	-webkit-box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+	-moz-box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+	-o-box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+	box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+
+	-webkit-border-top-right-radius: 31px;
+	-webkit-border-bottom-right-radius: 31px;
+	-moz-border-radius-topright: 31px;
+	-moz-border-radius-bottomright: 31px;
+	border-top-right-radius: 31px;
+	border-bottom-right-radius: 31px;
+
+	-webkit-transition: background-color .25s ease, color .5s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-moz-transition: background-color .25s ease, color .5s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-o-transition: background-color .25s ease, color .5s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	transition: background-color .25s ease, color .5s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+}
+.opacity #web20 li a {
+	color: #000;
+	opacity: .42;
+}
+#web20 li a h4 {
+	font-size: 12px;
+	padding-top: 14px;
+}
+#web20 li a:hover,
+#web20 li a:focus {
+	color: #fff;
+	opacity: 1;
+}
+.rgba #web20 li a:hover,
+.rgba #web20 li a:focus {
+	text-shadow: rgba(0,0,0, .82) 1px 1px 1px;
+	width: 251px;
+	
+	-webkit-box-shadow: rgba(0,0,0, .42) 2px 2px 2px;
+	-moz-box-shadow: rgba(0,0,0, .42) 2px 2px 2px;
+	-o-box-shadow: rgba(0,0,0, .42) 2px 2px 2px;
+	box-shadow: rgba(0,0,0, .42) 2px 2px 2px;
+
+	-webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-moz-transition: background-color .25s ease, color .25s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	-o-transition: background-color .25s ease, color .25s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+	transition: background-color .25s ease, color .25s ease, width .2s ease-out, -webkit-box-shadow .25s ease, text-shadow .2s ease, opacity .2s ease;
+}
+
+#web20 #twitter    a { background-position: 100%  -0px; }
+#web20 #facebook   a { background-position: 100% -66px; }
+#web20 #linkedin   a { background-position: 100% -132px; }
+
+#twitter    a:hover, #twitter    a:focus { background-color: #28adff; }
+#facebook   a:hover, #facebook   a:focus { background-color: #1a90c6; }
+#linkedin   a:hover, #linkedin   a:focus { background-color: #006699; }
+
+.rgba #twitter    a { background-color: rgba( 40, 175, 255, 0); }
+.rgba #facebook   a { background-color: rgba( 26, 144, 198, 0); }
+.rgba #linkedin   a { background-color: rgba(  0, 102, 153, 0); }
+
+.rgba #twitter    a:hover, .rgba #twitter    a:focus { background-color: rgba( 40, 175, 255, .82); }
+.rgba #facebook   a:hover, .rgba #facebook   a:focus { background-color: rgba( 26, 144, 198, .82); }
+.rgba #linkedin   a:hover, .rgba #linkedin   a:focus { background-color: rgba(  0, 102, 153, .82); }
+
+h4 {
+display: block;
+-webkit-margin-before: 1.33em;
+-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}

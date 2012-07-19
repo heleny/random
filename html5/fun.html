@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/*	Container */
+			    ul
+			{	font-family: Arial, Helvetica, sans-serif;
+			    font-size: 12px;
+			    background: #ccc;
+			    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e9e9e9));
+			    background: -moz-linear-gradient(top, #fff, #e9e9e9);
+			    display: block;
+			    clear: left;
+			    float: left;
+			    padding: 0 15px;
+			    margin: 0 0 10px 0;
+			    -webkit-box-shadow: 0 0 2px #333;
+			    -moz-box-shadow: 0 0 2px #333;
+			    box-shadow: 0 0 2px #333;
+			    border: 1px solid #fff;
+			    -webkit-border-radius: 3px;
+			    -moz-border-radius: 3px;
+			    border-radius: 3px; }
+			/*	Primary Nav Items */
+			    ul li
+			{	margin: 0;
+			    float: left;
+			    display: block;
+			    list-style: none; }
+			    /*	Primary Nav Items - Links*/
+			        ul li a
+			    {	padding: 10px;
+			        display: block;
+			        color: #666;
+			        text-decoration: none;
+			        text-shadow: 1px 1px 1px #fff; }
+			        ul li a:hover
+			    {	color: #000; }
+			        /*	Secondary Nav Container - Dropdown */
+			            ul li ul
+			        {	margin: 0 0 0 -15px;
+			            display: none;
+			            -webkit-border-top-left-radius: 0;
+			            -webkit-border-top-right-radius: 0;
+			            -moz-border-topleft-radius: 0;
+			            -moz-border-topright-radius: 0;
+			            border-top-left-radius: 0;
+			            border-top-right-radius: 0; }
+			            ul li:hover ul
+			        {	display: block;
+			            position: absolute; }
+			            /* 	Secondary Nav Items */
+			                ul li ul li
+			            {	clear: left; }
+			
+						.red, .red li ul
+						{	background: #e01111;
+						    background: -webkit-gradient(linear, left top, left bottom, from(#e01111), to(#901d1d));
+						    background: -moz-linear-gradient(top, #e01111, #901d1d);
+						    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#e01111', endColorstr='#901d1d'); }
+						    .red a
+						{	color: #fff;
+						    text-shadow: 0 -1px 1px #770d0d; }
+						    .red a:hover
+						{	color: #fff; }
+		</style>
+	</head>
+	<body>
+		<ul class="red">
+		<li><a href="#">Nav Item</a>
+		    <ul>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		    </ul>
+		</li>
+		<li><a href="#">Nav Item</a>
+		    <ul>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		    </ul>
+		</li>
+		<li><a href="#">Nav Item</a>
+		    <ul>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		        <li><a href="#">Sub Item</a></li>
+		    </ul>
+		</li>
+		</ul>
+	</body>
+</html>
