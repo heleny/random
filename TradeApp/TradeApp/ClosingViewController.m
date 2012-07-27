@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Closed";
+//    self.title = @"Closed";
     data = [NSArray arrayWithObjects: @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
 
     // Uncomment the following line to preserve selection between presentations.

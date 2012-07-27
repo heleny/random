@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Active";
+//    self.title = @"Active";
 	data = [[NSMutableArray alloc] initWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
 
    	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {

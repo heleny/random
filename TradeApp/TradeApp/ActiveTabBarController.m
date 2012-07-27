@@ -30,11 +30,11 @@
     [super viewDidLoad];
     
     ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
-    UITabBarItem *sellTab = [[UITabBarItem alloc] initWithTitle:@"Sell" image:nil tag:1];
+    UITabBarItem *sellTab = [[UITabBarItem alloc] initWithTitle:@"SELL" image:nil tag:1];
     [activeViewController setTabBarItem:sellTab];
     
     ClosingViewController *closingViewController = [[ClosingViewController alloc] init];
-    UITabBarItem *buyTab = [[UITabBarItem alloc] initWithTitle:@"Buy" image:nil tag:1];
+    UITabBarItem *buyTab = [[UITabBarItem alloc] initWithTitle:@"BUY" image:nil tag:1];
     [closingViewController setTabBarItem:buyTab];
     
     self.viewControllers = [NSMutableArray arrayWithObjects:activeViewController, closingViewController, nil];
@@ -44,7 +44,6 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

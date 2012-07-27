@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		27F6AF2D15A0D63100BBE20E /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB8A159503CA0057B816 /* ZUUIRevealController.m */; };
 		27F6AF3015A0EE3200BBE20E /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */; };
+		7932705015C1D340002A85C0 /* RadioButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932704F15C1D340002A85C0 /* RadioButtonsViewController.m */; };
+		7932705415C1D5BA002A85C0 /* RadioButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932705315C1D5BA002A85C0 /* RadioButtonView.m */; };
+		7932707915C2F6FA002A85C0 /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7932707715C2F6FA002A85C0 /* radio-off.png */; };
+		7932707A15C2F6FA002A85C0 /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7932707815C2F6FA002A85C0 /* radio-on.png */; };
 		7947FB6D1595038E0057B816 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB6C1595038E0057B816 /* UIKit.framework */; };
 		7947FB6F1595038E0057B816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB6E1595038E0057B816 /* Foundation.framework */; };
 		7947FB711595038E0057B816 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947FB701595038E0057B816 /* CoreGraphics.framework */; };
@@ -32,6 +36,12 @@
 /* Begin PBXFileReference section */
 		27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveViewController.h; sourceTree = "<group>"; };
 		27F6AF2F15A0EE3200BBE20E /* ActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveViewController.m; sourceTree = "<group>"; };
+		7932704E15C1D33F002A85C0 /* RadioButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButtonsViewController.h; sourceTree = "<group>"; };
+		7932704F15C1D340002A85C0 /* RadioButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButtonsViewController.m; sourceTree = "<group>"; };
+		7932705215C1D5BA002A85C0 /* RadioButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButtonView.h; sourceTree = "<group>"; };
+		7932705315C1D5BA002A85C0 /* RadioButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButtonView.m; sourceTree = "<group>"; };
+		7932707715C2F6FA002A85C0 /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-off.png"; path = "../../../Downloads/radio-off.png"; sourceTree = "<group>"; };
+		7932707815C2F6FA002A85C0 /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-on.png"; path = "../../../Downloads/radio-on.png"; sourceTree = "<group>"; };
 		7947FB681595038E0057B816 /* TradeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7947FB6C1595038E0057B816 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7947FB6E1595038E0057B816 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +139,10 @@
 				7947FB98159505CA0057B816 /* RearViewController.m */,
 				7947FB93159505700057B816 /* TradeAppViewController.h */,
 				7947FB94159505700057B816 /* TradeAppViewController.m */,
+				7932704E15C1D33F002A85C0 /* RadioButtonsViewController.h */,
+				7932704F15C1D340002A85C0 /* RadioButtonsViewController.m */,
+				7932705215C1D5BA002A85C0 /* RadioButtonView.h */,
+				7932705315C1D5BA002A85C0 /* RadioButtonView.m */,
 				7947FBA615951AC70057B816 /* WonViewController.h */,
 				7947FBA715951AC70057B816 /* WonViewController.m */,
 				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
@@ -151,6 +165,8 @@
 		79C55B0615A339CD0038A5E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7932707715C2F6FA002A85C0 /* radio-off.png */,
+				7932707815C2F6FA002A85C0 /* radio-on.png */,
 				79715DDD15A348BE005DD8C8 /* logo.png */,
 				79C55B1815A33DDF0038A5E9 /* blueArrow.png */,
 				79C55B0715A33A050038A5E9 /* arrow.png */,
@@ -215,6 +231,8 @@
 				79C55B0815A33A050038A5E9 /* arrow.png in Resources */,
 				79C55B1915A33DDF0038A5E9 /* blueArrow.png in Resources */,
 				79715DDE15A348BE005DD8C8 /* logo.png in Resources */,
+				7932707915C2F6FA002A85C0 /* radio-off.png in Resources */,
+				7932707A15C2F6FA002A85C0 /* radio-on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +254,8 @@
 				7947FBA815951AC70057B816 /* WonViewController.m in Sources */,
 				27F6AF3015A0EE3200BBE20E /* ActiveViewController.m in Sources */,
 				7996313715A38E7500111E53 /* ActiveTabBarController.m in Sources */,
+				7932705015C1D340002A85C0 /* RadioButtonsViewController.m in Sources */,
+				7932705415C1D5BA002A85C0 /* RadioButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

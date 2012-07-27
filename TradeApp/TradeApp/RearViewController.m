@@ -13,6 +13,7 @@
 #import "WonViewController.h"
 #import "ActiveViewcontroller.h"
 #import "ActiveTabBarController.h"
+#import "RadioButtonsViewController.h"
 
 @interface RearViewController ()
 
@@ -42,7 +43,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
-    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", nil];
+    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Radio Buttons", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -185,7 +186,6 @@
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:closingViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
-		// Seems the user attempts to 'switch' to exactly the same controller he came from!
 		else
 		{
 			[tradeAppViewController revealToggle:self];
@@ -194,7 +194,7 @@
 	else if (indexPath.row == 2)
 	{
 		
-		NSLog(@"third row is clicked");
+        NSLog(@"third row is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[WonViewController class]])
 		{
@@ -208,7 +208,22 @@
 			[tradeAppViewController revealToggle:self];
 		}
 	}
-	else if (indexPath.row == 3)
+    else if (indexPath.row == 3) {
+        NSLog(@"Radio Buttons is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
+		{
+			RadioButtonsViewController *radioButtonsViewController = [[RadioButtonsViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:radioButtonsViewController];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else
+		{
+			[tradeAppViewController revealToggle:self];
+		}
+
+        
+    }
+	else if (indexPath.row == 4)
 	{
 		[tradeAppViewController showFrontViewCompletely:NO];
 	}
