@@ -179,16 +179,16 @@
 }
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return [arrayColors count];
+    return [years count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [arrayColors objectAtIndex:row];
+    return [years objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    NSLog(@"Selected Color: %@. Index of selected color: %i", [arrayColors objectAtIndex:row], row);
+    NSLog(@"Selected Color: %@. Index of selected color: %i", [years objectAtIndex:row], row);
 }
 
 
