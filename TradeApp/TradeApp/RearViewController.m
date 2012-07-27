@@ -14,6 +14,7 @@
 #import "ActiveViewcontroller.h"
 #import "ActiveTabBarController.h"
 #import "RadioButtonsViewController.h"
+#import "SellAndBuyViewController.h"
 
 @interface RearViewController ()
 
@@ -43,7 +44,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
-    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Others", nil];
+    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Others", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -157,6 +158,7 @@
     
     
 	if (indexPath.row == 0) {
+        NSLog(@"Active is clicked");
         // FrontViewController
 //        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[FrontViewController class]]) {
 //                FrontViewController *frontViewController = [[FrontViewController alloc] init];
@@ -179,6 +181,7 @@
 	// ... and the second row (=1) corresponds to the "MapViewController".
 	else if (indexPath.row == 1)
 	{
+        NSLog(@"Closing is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ClosingViewController class]])
 		{
@@ -194,7 +197,7 @@
 	else if (indexPath.row == 2)
 	{
 		
-        NSLog(@"third row is clicked");
+        NSLog(@"Won is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[WonViewController class]])
 		{
@@ -209,6 +212,22 @@
 		}
 	}
     else if (indexPath.row == 3) {
+        NSLog(@"Sell & Buy is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[SellAndBuyViewController class]])
+		{
+			SellAndBuyViewController *sellAndBuyViewController = [[SellAndBuyViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:sellAndBuyViewController];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else
+		{
+			[tradeAppViewController revealToggle:self];
+		}
+        
+        
+    }
+
+    else if (indexPath.row == 4) {
         NSLog(@"Radio Buttons is clicked");
         if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
 		{
