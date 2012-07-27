@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SellViewController.h"
+#import "BuyViewController.h"
 
 @interface SellAndBuyViewController : UIViewController
+
+@property (nonatomic, strong) SellViewController *sellViewController;
+@property (nonatomic, strong) BuyViewController *buyViewController;
 
 @end

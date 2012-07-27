@@ -44,7 +44,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
-    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Others", nil];
+    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
