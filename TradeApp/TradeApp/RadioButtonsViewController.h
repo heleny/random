@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RadioButtonsViewController : UIViewController
+@interface RadioButtonsViewController : UITableViewController
 
 
 @end

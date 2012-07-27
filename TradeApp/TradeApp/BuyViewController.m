@@ -74,7 +74,7 @@
 	}
 	
 	cell.textLabel.text = [data objectAtIndex:indexPath.row];
-	cell.textLabel.textColor = [UIColor brownColor];
+	cell.textLabel.textColor = [UIColor purpleColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;

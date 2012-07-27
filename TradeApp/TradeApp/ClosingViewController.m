@@ -84,7 +84,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [data objectAtIndex:indexPath.row];
-	cell.textLabel.textColor = [UIColor darkGrayColor];
+	cell.textLabel.textColor = [UIColor purpleColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;

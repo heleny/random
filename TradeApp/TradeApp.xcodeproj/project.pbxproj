@@ -30,6 +30,7 @@
 		79B6608415C31BF100054339 /* SellAndBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6608315C31BF100054339 /* SellAndBuyViewController.m */; };
 		79B6609815C330EE00054339 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6609715C330EE00054339 /* SellViewController.m */; };
 		79B6609B15C3336400054339 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6609A15C3336400054339 /* BuyViewController.m */; };
+		79B6609E15C33C1C00054339 /* VehicleInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6609D15C33C1C00054339 /* VehicleInfoViewController.m */; };
 		79C55B0815A33A050038A5E9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B0715A33A050038A5E9 /* arrow.png */; };
 		79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */; };
 		79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */; };
@@ -77,6 +78,8 @@
 		79B6609715C330EE00054339 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
 		79B6609915C3336400054339 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		79B6609A15C3336400054339 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
+		79B6609C15C33C1C00054339 /* VehicleInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleInfoViewController.h; sourceTree = "<group>"; };
+		79B6609D15C33C1C00054339 /* VehicleInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleInfoViewController.m; sourceTree = "<group>"; };
 		79C55B0415A339C10038A5E9 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		79C55B0715A33A050038A5E9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				79B6609715C330EE00054339 /* SellViewController.m */,
 				79B6609915C3336400054339 /* BuyViewController.h */,
 				79B6609A15C3336400054339 /* BuyViewController.m */,
+				79B6609C15C33C1C00054339 /* VehicleInfoViewController.h */,
+				79B6609D15C33C1C00054339 /* VehicleInfoViewController.m */,
 			);
 			name = Classes;
 			path = TradeApp;
@@ -274,6 +279,7 @@
 				79B6608415C31BF100054339 /* SellAndBuyViewController.m in Sources */,
 				79B6609815C330EE00054339 /* SellViewController.m in Sources */,
 				79B6609B15C3336400054339 /* BuyViewController.m in Sources */,
+				79B6609E15C33C1C00054339 /* VehicleInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

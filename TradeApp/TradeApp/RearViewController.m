@@ -14,6 +14,7 @@
 #import "ActiveViewcontroller.h"
 #import "ActiveTabBarController.h"
 #import "RadioButtonsViewController.h"
+#import "VehicleInfoViewController.h"
 #import "SellAndBuyViewController.h"
 
 @interface RearViewController ()
@@ -229,10 +230,19 @@
 
     else if (indexPath.row == 4) {
         NSLog(@"Radio Buttons is clicked");
-        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
+        // RadioButtonsViewController
+//        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
+//		{
+//			RadioButtonsViewController *radioButtonsViewController = [[RadioButtonsViewController alloc] init];
+//			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:radioButtonsViewController];
+//			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+//		}
+        
+        //VehicleInfoViewController
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[VehicleInfoViewController class]])
 		{
-			RadioButtonsViewController *radioButtonsViewController = [[RadioButtonsViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:radioButtonsViewController];
+			VehicleInfoViewController *vehicleInfoViewController = [[VehicleInfoViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vehicleInfoViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
 		else

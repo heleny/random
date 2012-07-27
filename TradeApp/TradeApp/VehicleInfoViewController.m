@@ -1,24 +1,24 @@
 //
-//  WonViewController.m
+//  VehicleInfoViewController.m
 //  TradeApp
 //
-//  Created by Helen on 12-06-22.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Helen Yang on 12-07-27.
+//
 //
 
-#import "WonViewController.h"
+#import "VehicleInfoViewController.h"
 
-@interface WonViewController ()
+@interface VehicleInfoViewController ()
 
 @end
 
-@implementation WonViewController
+@implementation VehicleInfoViewController
 
-@synthesize data;
+@synthesize disclosures, options;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
     }
@@ -28,24 +28,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Won";
 
-    data = [NSArray arrayWithObjects:@"2011 Audi", @"2009 BMW", @"2010 Lexus", @"2001 Toyota Camry", @"2005 Saturn", @"2004 Dodge", nil];
-
-    
+    self.title = @"Vehicle Info";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	
-	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
-		{
+    
+    disclosures = [NSMutableArray arrayWithObjects:@"Year", @"Make", @"Model", @"VIN", @"Transmission", nil]; // disclosures
+    options = [NSMutableArray arrayWithObjects:@"Sunroof", @"Alloy Wheels", @"Snow Tires", @"Heated Seats", @"Leather", nil]; // options
+    
+    if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
+    {
 		UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
 		[self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
 		
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Reveal") style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
-		}
+    }
 }
 
 - (void)viewDidUnload
@@ -64,54 +64,51 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+        return @"Disclosures";
+    else
+        return @"Options";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return data.count;
+    if (section == 0)
+        return [self.disclosures count];
+    else if (section == 1)
+        return [self.options count];
+    
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+	}
+	
+    if (indexPath.section == 0)
+    {
+        cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
     }
-    // Configure the cell...
+    else if (indexPath.section == 1)
+    {
+        cell.textLabel.text = [options objectAtIndex:indexPath.row];
+    }
     
-    cell.textLabel.text = [data objectAtIndex:indexPath.row];
 	cell.textLabel.textColor = [UIColor purpleColor];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
 }
-
--(void) refresh {
-    [self performSelector:@selector(addItem) withObject:nil afterDelay:2.0];
-}
-
-- (void)addItem {
-    // Add a new time
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    NSString *now = [dateFormatter stringFromDate:[NSDate date]];
-    
-    UILabel *footer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 28)];
-    footer.textAlignment = UITextAlignmentCenter;
-    footer.textColor = [UIColor blueColor];
-    footer.text = [NSString stringWithFormat:@"Last updated at %@", now];
-    self.tableView.tableFooterView = footer;
-    
-    [self.tableView reloadData];
-    
-    [self stopLoading];
-}
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -128,7 +125,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
