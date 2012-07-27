@@ -29,13 +29,13 @@
 //	FrontViewController *frontViewController = [[FrontViewController alloc] init];
 //	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
 
-//	// ActiveViewController
-//	ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
-//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
+	// ActiveViewController
+	ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
     
     // ActiveTabBarController
-	ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeTabBarController];
+//	ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];
+//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeTabBarController];
 	
 	TradeAppViewController *tradeAppViewController = [[TradeAppViewController alloc] initWithFrontViewController:navigationController rearViewController:rearViewController];
 	self.viewController = tradeAppViewController;

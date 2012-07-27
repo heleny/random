@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
     UITabBarItem *sellTab = [[UITabBarItem alloc] initWithTitle:@"SELL" image:nil tag:1];
     [activeViewController setTabBarItem:sellTab];

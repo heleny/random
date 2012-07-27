@@ -37,7 +37,6 @@
     }
 
     NSArray *options = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8",nil];
-//    NSArray *options = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", nil];
     RadioButtonView *radioButtonView = [[RadioButtonView alloc] initWithFrame:CGRectMake(0, 20, 320, 75) andOptions:options andColumns:5];
     [self.view addSubview:radioButtonView];
     

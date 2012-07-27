@@ -162,14 +162,14 @@
 //                FrontViewController *frontViewController = [[FrontViewController alloc] init];
         
         // ActiveViewController
-//		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveViewController class]]) {
-//                ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
+		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveViewController class]]) {
+                ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
             
-        // ActiveTabBarController
-        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveTabBarController class]]) {
-                ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];    
+//        // ActiveTabBarController
+//        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ActiveTabBarController class]]) {
+//                ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];    
     
-                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeTabBarController];
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
                 [tradeAppViewController setFrontViewController:navigationController animated:NO];
 			}
 		else {
