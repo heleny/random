@@ -157,7 +157,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
@@ -166,9 +166,11 @@
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
         if (self.selectedYear && indexPath.row == 0)
         {
-            UILabel *secondary = [[UILabel alloc] initWithFrame:cell.textLabel.frame];
+            CGRect frame = cell.textLabel.frame;
+            UILabel *secondary = [[UILabel alloc] initWithFrame:CGRectMake(frame.origin.x + 220, frame.origin.y, frame.size.width, frame.size.height)];
             secondary.textAlignment = UITextAlignmentRight;
             secondary.text = self.selectedYear;
+            secondary.backgroundColor = [UIColor clearColor];
             [cell.contentView addSubview:secondary];
         }
     }
