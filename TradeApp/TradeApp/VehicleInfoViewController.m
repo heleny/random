@@ -8,13 +8,19 @@
 
 #import "VehicleInfoViewController.h"
 
-@interface VehicleInfoViewController ()
+#define WIDTH 320.0f
+#define HEIGHT 480.0f
 
+@interface VehicleInfoViewController ()
+@property (nonatomic, weak) NSString *selectedYear;
+@property (nonatomic, weak) NSString *selectedMake;
+@property (nonatomic, weak) NSString *selectedModel;
+@property (nonatomic, weak) NSString *selectedTransmission;
 @end
 
 @implementation VehicleInfoViewController
 
-@synthesize disclosures, options, pickerView, years, makes, models, transmissions;
+@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Screen size (width, height) = (%f, %f)", [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
 
     self.title = @"Vehicle Info";
     // Uncomment the following line to preserve selection between presentations.
@@ -48,20 +56,68 @@
     }
     
     years = [NSMutableArray arrayWithObjects:@"2012", @"2011", @"2010", @"2009", @"2008", @"2007", @"2006", @"2005", @"2004", @"2003", @"2002", @"2001", @"2000", @"1999", @"1998", @"1997",nil];
-
     makes = [NSMutableArray arrayWithObjects:@"Acura", @"Audi", @"BMW", @"Chevrolet", @"Chrysler", @"Ford", @"Honda", @"Hyundai", @"Jeep", @"Mazda", @"Mercedes-Benz", @"Nissan", @"Porsche", @"Saturn", @"Subaru", @"Toyota", @"Volkswagen", @"Volvo", nil];
-
     models = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", @"D", @"E", @"F", nil];
-
     transmissions = [NSMutableArray arrayWithObjects:@"Automatic", @"Manual", nil];
+
+    masterView = [[UIView alloc] initWithFrame:CGRectMake(0, self.viewSize.height/2, self.viewSize.width, 260)];
+    UIToolbar *pickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.viewSize.width, 44)];
+    pickerToolbar.barStyle = UIBarStyleBlackTranslucent;
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(actionPickerCancel:)];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(actionPickerDone:)];
+    [pickerToolbar setItems:[NSArray arrayWithObjects:cancel, space, done, nil] animated:YES];
+    
+    
+    [masterView addSubview:pickerToolbar];
+
+    CGRect rect = CGRectMake(0, 40, self.viewSize.width, 216);
+    self.yearPicker = [[UIPickerView alloc] init];
+    self.yearPicker.dataSource = self;
+    self.yearPicker.delegate = self;
+    self.yearPicker.frame = rect;
+    self.yearPicker.showsSelectionIndicator = YES;
+    [self.yearPicker selectRow:self.selectedIndex inComponent:0 animated:YES];
+    [masterView addSubview:self.yearPicker];
+    
+    self.makePicker = [[UIPickerView alloc] init];
+    self.makePicker.dataSource = self;
+    self.makePicker.delegate = self;
+    self.makePicker.frame = rect;
+    self.makePicker.showsSelectionIndicator = YES;
+    
+    self.modelPicker = [[UIPickerView alloc] init];
+    self.modelPicker.dataSource = self;
+    self.modelPicker.delegate = self;
+    self.modelPicker.frame = rect;
+    self.modelPicker.showsSelectionIndicator = YES;
+    
+    self.transmissionPicker = [[UIPickerView alloc] init];
+    self.transmissionPicker.dataSource = self;
+    self.transmissionPicker.delegate = self;
+    self.transmissionPicker.frame = rect;
+    self.transmissionPicker.showsSelectionIndicator = YES;
 
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.disclosures = nil;
+    self.options = nil;
+    self.years = nil;
+    self.makes = nil;
+    self.models = nil;
+    self.transmissions = nil;
+    self.yearPicker = nil;
+    self.makePicker = nil;
+    self.modelPicker = nil;
+    self.transmissionPicker = nil;
+    self.masterView = nil;
+    self.selectedYear = nil;
+    self.selectedMake = nil;
+    self.selectedModel = nil;
+    self.selectedTransmission = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -101,12 +157,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
     if (indexPath.section == 0)
     {
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
+        if (self.selectedYear && indexPath.row == 0)
+        {
+            UILabel *secondary = [[UILabel alloc] initWithFrame:cell.textLabel.frame];
+            secondary.textAlignment = UITextAlignmentRight;
+            secondary.text = self.selectedYear;
+            [cell.contentView addSubview:secondary];
+        }
     }
     else if (indexPath.section == 1)
     {
@@ -169,6 +233,10 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    if (indexPath.row == 0)
+    {
+        [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
+    }
 }
 
 #pragma mark - UIPickerView
@@ -178,18 +246,48 @@
     return 1;
 }
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
-    
-    return [years count];
+    if (thePickerView == yearPicker)
+        return [years count];
+    return 0;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [years objectAtIndex:row];
+    if (thePickerView == yearPicker)
+        return [years objectAtIndex:row];
+    return 0;
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    NSLog(@"Selected Color: %@. Index of selected color: %i", [years objectAtIndex:row], row);
+    if (thePickerView == yearPicker)
+        NSLog(@"Selected Color: %@. Index of selected color: %i", [years objectAtIndex:row], row);
 }
+
+#pragma mark - utilities
+
+
+- (CGSize)viewSize {
+    if (!(UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)))
+        return CGSizeMake(480, 320);
+    return CGSizeMake(320, 480);
+}
+
+#pragma mark - Selector
+
+- (void)actionPickerCancel: (id) sender
+{
+    [self.masterView removeFromSuperview];
+    NSLog(@"User pressed cancel button");
+}
+
+- (void)actionPickerDone: (id) sender
+{
+    [self.masterView removeFromSuperview];
+    self.selectedYear = [years objectAtIndex:[yearPicker selectedRowInComponent:0]];
+    NSLog(@"User picked %@", self.selectedYear);
+    [self.tableView reloadData];
+}
+
+
 
 
 @end
