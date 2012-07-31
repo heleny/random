@@ -20,7 +20,7 @@
 
 @implementation VehicleInfoViewController
 
-@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission;
+@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission, currentActivePicker;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -164,15 +164,20 @@
     if (indexPath.section == 0)
     {
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
-        if (self.selectedYear && indexPath.row == 0)
-        {
-            CGRect frame = cell.textLabel.frame;
-            UILabel *secondary = [[UILabel alloc] initWithFrame:CGRectMake(frame.origin.x + 220, frame.origin.y, frame.size.width, frame.size.height)];
-            secondary.textAlignment = UITextAlignmentRight;
-            secondary.text = self.selectedYear;
-            secondary.backgroundColor = [UIColor clearColor];
-            [cell.contentView addSubview:secondary];
-        }
+
+		CGRect frame = cell.textLabel.frame;
+		UILabel *secondary = [[UILabel alloc] initWithFrame:CGRectMake(frame.origin.x + 210, frame.origin.y, frame.size.width + 20, frame.size.height)];
+		secondary.textAlignment = UITextAlignmentRight;
+		secondary.backgroundColor = [UIColor clearColor];
+		[cell.contentView addSubview:secondary];
+		if (self.selectedYear && indexPath.row == 0)
+			secondary.text = self.selectedYear;
+		else if (selectedMake && indexPath.row == 1)
+			secondary.text = self.selectedMake;
+		else if (selectedModel && indexPath.row == 2)
+			secondary.text = self.selectedModel;
+		else if (selectedTransmission && indexPath.row == 4)
+			secondary.text = self.selectedTransmission;
     }
     else if (indexPath.section == 1)
     {
@@ -236,9 +241,8 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     if (indexPath.row == 0)
-    {
         [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
-    }
+		
 }
 
 #pragma mark - UIPickerView
@@ -250,18 +254,38 @@
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
     if (thePickerView == yearPicker)
         return [years count];
+	else if (thePickerView == makePicker)
+		return [makes count];
+	else if (thePickerView == modelPicker)
+		return [models count];
+	else if (thePickerView == transmissionPicker)
+		return [transmissions count];
+
     return 0;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if (thePickerView == yearPicker)
         return [years objectAtIndex:row];
+	else if (thePickerView == makePicker)
+		return [makes objectAtIndex:row];
+	else if (thePickerView == modelPicker)
+		return [models objectAtIndex:row];
+	else if (thePickerView == transmissionPicker)
+		return [transmissions objectAtIndex:row];
     return 0;
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+	self.currentActivePicker = thePickerView;
     if (thePickerView == yearPicker)
-        NSLog(@"Selected Color: %@. Index of selected color: %i", [years objectAtIndex:row], row);
+        NSLog(@"Selected year: %@", [years objectAtIndex:row]);
+	else if (thePickerView == makePicker)
+		NSLog(@"Selected make: %@", [makes objectAtIndex:row]);
+	else if (thePickerView == modelPicker)
+		NSLog(@"Selected model: %@", [models objectAtIndex:row]);
+	else if (thePickerView == transmissionPicker)
+		NSLog(@"Selected transmission: %@", [transmissions objectAtIndex:row]);
 }
 
 #pragma mark - utilities
@@ -284,8 +308,14 @@
 - (void)actionPickerDone: (id) sender
 {
     [self.masterView removeFromSuperview];
-    self.selectedYear = [years objectAtIndex:[yearPicker selectedRowInComponent:0]];
-    NSLog(@"User picked %@", self.selectedYear);
+	if (self.currentActivePicker == self.yearPicker)
+    	self.selectedYear = [years objectAtIndex:[yearPicker selectedRowInComponent:0]];
+	else if (self.currentActivePicker == self.makePicker)
+		self.selectedMake = [makes objectAtIndex:[makePicker selectedRowInComponent:0]];
+	else if (self.currentActivePicker = self.modelPicker)
+		self.selectedModel = [models objectAtIndex:[modelPicker selectedRowInComponent:0]];
+	else if (self.currentActivePicker == self.transmissionPicker)
+		self.selectedTransmission = [transmissions objectAtIndex:[transmissionPicker selectedRowInComponent:0]];
     [self.tableView reloadData];
 }
 

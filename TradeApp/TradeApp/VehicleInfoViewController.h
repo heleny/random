@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIPickerView *makePicker;
 @property (nonatomic, strong) UIPickerView *modelPicker;
 @property (nonatomic, strong) UIPickerView *transmissionPicker;
+@property (nonatomic, strong) UIPickerView *currentActivePicker;
 @property int selectedIndex;
 @property (nonatomic, strong) UIView *masterView;
 

@@ -34,7 +34,6 @@
 		79C55B0815A33A050038A5E9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B0715A33A050038A5E9 /* arrow.png */; };
 		79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */; };
 		79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */; };
-		79C55B1915A33DDF0038A5E9 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B1815A33DDF0038A5E9 /* blueArrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +83,6 @@
 		79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		79C55B0715A33A050038A5E9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		79C55B1815A33DDF0038A5E9 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueArrow.png; path = ../../EGOTableViewPullRefresh/Demo/TableViewPull/Resources/blueArrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +157,6 @@
 				7947FBA715951AC70057B816 /* WonViewController.m */,
 				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
 				7947FB8A159503CA0057B816 /* ZUUIRevealController.m */,
-				7947FB731595038E0057B816 /* Supporting Files */,
 				79B6608215C31BF100054339 /* SellAndBuyViewController.h */,
 				79B6608315C31BF100054339 /* SellAndBuyViewController.m */,
 				79B6609615C330EE00054339 /* SellViewController.h */,
@@ -168,6 +165,7 @@
 				79B6609A15C3336400054339 /* BuyViewController.m */,
 				79B6609C15C33C1C00054339 /* VehicleInfoViewController.h */,
 				79B6609D15C33C1C00054339 /* VehicleInfoViewController.m */,
+				7947FB731595038E0057B816 /* Supporting Files */,
 			);
 			name = Classes;
 			path = TradeApp;
@@ -188,7 +186,6 @@
 				7932707B15C2F878002A85C0 /* radio-off.png */,
 				7932707C15C2F878002A85C0 /* radio-on.png */,
 				79715DDD15A348BE005DD8C8 /* logo.png */,
-				79C55B1815A33DDF0038A5E9 /* blueArrow.png */,
 				79C55B0715A33A050038A5E9 /* arrow.png */,
 				7947FB751595038E0057B816 /* InfoPlist.strings */,
 				7947FB741595038E0057B816 /* TradeApp-Info.plist */,
@@ -249,7 +246,6 @@
 				7947FB771595038E0057B816 /* InfoPlist.strings in Resources */,
 				7947FB801595038E0057B816 /* MainStoryboard.storyboard in Resources */,
 				79C55B0815A33A050038A5E9 /* arrow.png in Resources */,
-				79C55B1915A33DDF0038A5E9 /* blueArrow.png in Resources */,
 				79715DDE15A348BE005DD8C8 /* logo.png in Resources */,
 				7932707D15C2F878002A85C0 /* radio-off.png in Resources */,
 				7932707E15C2F878002A85C0 /* radio-on.png in Resources */,
