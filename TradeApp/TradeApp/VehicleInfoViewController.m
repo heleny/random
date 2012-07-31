@@ -16,11 +16,12 @@
 @property (nonatomic, weak) NSString *selectedMake;
 @property (nonatomic, weak) NSString *selectedModel;
 @property (nonatomic, weak) NSString *selectedTransmission;
+@property (nonatomic, weak) NSString *selectedVin;
 @end
 
 @implementation VehicleInfoViewController
 
-@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission, currentActivePicker;
+@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission, currentActivePicker, vins = _vins, vinPicker = _vinPicker, selectedVin = _selectedVin;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,6 +59,7 @@
     years = [NSMutableArray arrayWithObjects:@"2012", @"2011", @"2010", @"2009", @"2008", @"2007", @"2006", @"2005", @"2004", @"2003", @"2002", @"2001", @"2000", @"1999", @"1998", @"1997",nil];
     makes = [NSMutableArray arrayWithObjects:@"Acura", @"Audi", @"BMW", @"Chevrolet", @"Chrysler", @"Ford", @"Honda", @"Hyundai", @"Jeep", @"Mazda", @"Mercedes-Benz", @"Nissan", @"Porsche", @"Saturn", @"Subaru", @"Toyota", @"Volkswagen", @"Volvo", nil];
     models = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", @"D", @"E", @"F", nil];
+    self.vins = [NSMutableArray arrayWithObjects:@"1GAHG39R621205085", @"4F2YZ92Z16KM21800", @"WVWEU73C16P133410", @"WDBKK49F01F178716", @"KNDJD736675665533", @"5GRGN23U03H141049", @"6MMAP87P43T010508", @"JHMFA36236S011166", @"KNDJD733855415827", @"WVWAK73C56P166477", nil];
     transmissions = [NSMutableArray arrayWithObjects:@"Automatic", @"Hybrid", @"Manual", nil];
 
     masterView = [[UIView alloc] initWithFrame:CGRectMake(0, self.viewSize.height/2, self.viewSize.width, 260)];
@@ -91,6 +93,12 @@
     self.modelPicker.frame = rect;
     self.modelPicker.showsSelectionIndicator = YES;
     
+    self.vinPicker = [[UIPickerView alloc] init];
+    self.vinPicker.dataSource = self;
+    self.vinPicker.delegate = self;
+    self.vinPicker.frame = rect;
+    self.vinPicker.showsSelectionIndicator = YES;
+    
     self.transmissionPicker = [[UIPickerView alloc] init];
     self.transmissionPicker.dataSource = self;
     self.transmissionPicker.delegate = self;
@@ -117,6 +125,9 @@
     self.selectedMake = nil;
     self.selectedModel = nil;
     self.selectedTransmission = nil;
+    self.vins = nil;
+    self.vinPicker = nil;
+    self.selectedVin = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -171,13 +182,15 @@
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
         
         secondaryLabel = (UILabel *)[cell.contentView viewWithTag:123];
-        secondaryLabel.frame = CGRectMake(cell.frame.size.width - 150, cell.textLabel.frame.origin.y, 100, cell.textLabel.frame.size.height);
+        secondaryLabel.frame = CGRectMake(cell.frame.size.width - 220, cell.textLabel.frame.origin.y, 180, cell.textLabel.frame.size.height);
         if (indexPath.row == 0)
 			secondaryLabel.text = self.selectedYear;
 		else if (indexPath.row == 1)
 			secondaryLabel.text = self.selectedMake;
 		else if (indexPath.row == 2)
 			secondaryLabel.text = self.selectedModel;
+        else if (indexPath.row == 3)
+            secondaryLabel.text = self.selectedVin;
 		else if (indexPath.row == 4)
 			secondaryLabel.text = self.selectedTransmission;
     } else if (indexPath.section == 1) {
@@ -239,27 +252,24 @@
         switch (indexPath.row) {
             case 0:
                 [self.masterView addSubview:self.yearPicker];
-                [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
                 break;
             case 1:
                 [self.masterView addSubview:self.makePicker];
-                [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
                 break;
             case 2:
                 [self.masterView addSubview:self.modelPicker];
-                [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
                 break;
             case 3:
-                NSLog(@"************** VIN row is selected");
+                [self.masterView addSubview:self.vinPicker];
                 break;
             case 4:
                 [self.masterView addSubview:self.transmissionPicker];
-                [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
                 break;
                                            
             default:
                 break;
         }
+        [[[UIApplication sharedApplication] keyWindow] addSubview:self.masterView];
     }
 }
 
@@ -278,7 +288,9 @@
 		return [models count];
 	else if (thePickerView == self.transmissionPicker)
 		return [transmissions count];
-
+    else if (thePickerView == self.vinPicker) {
+        return [self.vins count];
+    }
     return 0;
 }
 
@@ -291,6 +303,8 @@
 		return [models objectAtIndex:row];
 	else if (thePickerView == transmissionPicker)
 		return [transmissions objectAtIndex:row];
+    else if (thePickerView == self.vinPicker)
+		return [self.vins objectAtIndex:row];
     return 0;
 }
 
@@ -329,11 +343,11 @@
 	else if (self.currentActivePicker == self.transmissionPicker) {
 		self.selectedTransmission = [self.transmissions objectAtIndex:[self.transmissionPicker selectedRowInComponent:0]];
     }
+    else if (self.currentActivePicker == self.vinPicker) {
+		self.selectedVin = [self.vins objectAtIndex:[self.vinPicker selectedRowInComponent:0]];
+    }
 
     [self.tableView reloadData];
 }
-
-
-
 
 @end

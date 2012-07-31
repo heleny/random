@@ -25,6 +25,7 @@
 		7947FB99159505CA0057B816 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FB98159505CA0057B816 /* RearViewController.m */; };
 		7947FBA5159519B50057B816 /* ClosingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FBA4159519B50057B816 /* ClosingViewController.m */; };
 		7947FBA815951AC70057B816 /* WonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7947FBA715951AC70057B816 /* WonViewController.m */; };
+		7963B7CA15C861BF00329235 /* TradeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7963B7C815C861BF00329235 /* TradeApp.xcdatamodeld */; };
 		79715DDE15A348BE005DD8C8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 79715DDD15A348BE005DD8C8 /* logo.png */; };
 		7996313715A38E7500111E53 /* ActiveTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996313615A38E7500111E53 /* ActiveTabBarController.m */; };
 		79B6608415C31BF100054339 /* SellAndBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6608315C31BF100054339 /* SellAndBuyViewController.m */; };
@@ -68,6 +69,7 @@
 		7947FBA4159519B50057B816 /* ClosingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClosingViewController.m; sourceTree = "<group>"; };
 		7947FBA615951AC70057B816 /* WonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WonViewController.h; sourceTree = "<group>"; };
 		7947FBA715951AC70057B816 /* WonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WonViewController.m; sourceTree = "<group>"; };
+		7963B7C915C861BF00329235 /* TradeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeApp.xcdatamodel; sourceTree = "<group>"; };
 		79715DDD15A348BE005DD8C8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		7996313515A38E7500111E53 /* ActiveTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveTabBarController.h; sourceTree = "<group>"; };
 		7996313615A38E7500111E53 /* ActiveTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveTabBarController.m; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				7947FBA715951AC70057B816 /* WonViewController.m */,
 				7947FB89159503CA0057B816 /* ZUUIRevealController.h */,
 				7947FB8A159503CA0057B816 /* ZUUIRevealController.m */,
+				7963B7C815C861BF00329235 /* TradeApp.xcdatamodeld */,
 			);
 			name = Classes;
 			path = TradeApp;
@@ -276,6 +279,7 @@
 				79B6609815C330EE00054339 /* SellViewController.m in Sources */,
 				79B6609B15C3336400054339 /* BuyViewController.m in Sources */,
 				79B6609E15C33C1C00054339 /* VehicleInfoViewController.m in Sources */,
+				7963B7CA15C861BF00329235 /* TradeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7963B7C815C861BF00329235 /* TradeApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7963B7C915C861BF00329235 /* TradeApp.xcdatamodel */,
+			);
+			currentVersion = 7963B7C915C861BF00329235 /* TradeApp.xcdatamodel */;
+			path = TradeApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7947FB5F1595038E0057B816 /* Project object */;
 }
