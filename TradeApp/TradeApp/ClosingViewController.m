@@ -14,7 +14,7 @@
 
 @implementation ClosingViewController
 
-@synthesize data;
+@synthesize data = _data;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
 //    self.title = @"Closed";
-    data = [NSArray arrayWithObjects: @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
+    self.data = [NSArray arrayWithObjects: @"2007 Acura", @"1977 Ferrari", @"2011 Smart", @"2010 Mini Cooper", @"2009 Pontiac", @"2008 Porsche", @"1990 BMW", @"2003 Audi", @"2000 Jeep", @"2010 Toyota Lexus", @"2011 Mercedes-Benz", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -70,7 +70,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [data count];
+    return [self.data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,7 +83,7 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [data objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
 	cell.textLabel.textColor = [UIColor purpleColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

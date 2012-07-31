@@ -61,6 +61,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.activeList = nil;
+    self.closingList = nil;
+    self.wonList = nil;
+    self.lostList = nil;
+    self.arrivedList = nil;
+    self.deliveredList = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

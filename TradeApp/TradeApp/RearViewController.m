@@ -23,7 +23,7 @@
 
 @implementation RearViewController
 
-@synthesize states;
+@synthesize states = _states;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,14 +38,7 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-//    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Lost", @"Arrived", @"Delivered", nil];
-    states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", nil];
+    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -53,8 +46,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.states = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -66,7 +58,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
@@ -77,8 +68,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [states count];
+    return [self.states count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,7 +80,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellSeparatorStyleSingleLine reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [states objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.states objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -229,7 +219,7 @@
     }
 
     else if (indexPath.row == 4) {
-        NSLog(@"Radio Buttons is clicked");
+        NSLog(@"VehicleInfo is clicked");
         // RadioButtonsViewController
 //        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
 //		{

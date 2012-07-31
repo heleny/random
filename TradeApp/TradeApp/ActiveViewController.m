@@ -14,7 +14,7 @@
 
 @implementation ActiveViewController
 
-@synthesize data;
+@synthesize data = _data;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     self.title = @"Active";
-	data = [[NSMutableArray alloc] initWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
+	self.data = [[NSMutableArray alloc] initWithObjects:@"1999 Ford", @"2000 Jeep", @"2002 Lincoln", @"2004 Mazda", nil];
     
     if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
     {
@@ -44,8 +44,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.data = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -64,7 +63,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return data.count;
+    return self.data.count;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -80,7 +79,7 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 	}
 	
-	cell.textLabel.text = [data objectAtIndex:indexPath.row];
+	cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
 	cell.textLabel.textColor = [UIColor purpleColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
