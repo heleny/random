@@ -178,36 +178,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+//    static NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%d%d", indexPath.section, indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    UILabel *secondaryLabel;
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         if (indexPath.section == 0) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
-        secondaryLabel = [[UILabel alloc] init];
-        secondaryLabel.textAlignment = UITextAlignmentRight;
-        secondaryLabel.backgroundColor = [UIColor clearColor];
-        secondaryLabel.textColor = [UIColor blackColor];
-        secondaryLabel.tag = 123;
-        [cell.contentView addSubview:secondaryLabel];
 	}
 	
     if (indexPath.section == 0) {
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
-        secondaryLabel = (UILabel *)[cell.contentView viewWithTag:123];
-        secondaryLabel.frame = CGRectMake(cell.frame.size.width - 220, cell.textLabel.frame.origin.y, 180, cell.textLabel.frame.size.height);
+        NSString *detailLabel;
         if (indexPath.row == 0)
-			secondaryLabel.text = self.selectedYear;
+			detailLabel = self.selectedYear;
 		else if (indexPath.row == 1)
-			secondaryLabel.text = self.selectedMake;
+			detailLabel = self.selectedMake;
 		else if (indexPath.row == 2)
-			secondaryLabel.text = self.selectedModel;
+			detailLabel = self.selectedModel;
         else if (indexPath.row == 3)
-            secondaryLabel.text = self.selectedVin;
+            detailLabel = self.selectedVin;
 		else if (indexPath.row == 4)
-			secondaryLabel.text = self.selectedTransmission;
+			detailLabel = self.selectedTransmission;
+            
+        cell.detailTextLabel.text = detailLabel;
     } else if (indexPath.section == 1) {
         cell.textLabel.text = [options objectAtIndex:indexPath.row];
     }
