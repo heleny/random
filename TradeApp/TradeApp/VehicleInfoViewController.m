@@ -178,19 +178,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *CellIdentifier = @"Cell";
-    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%d%d", indexPath.section, indexPath.row];
+    static NSString *CellIdentifier = @"Cell";
+//    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%d%d", indexPath.section, indexPath.row];  // make each cell unique
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-        if (indexPath.section == 0) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-	}
-	
+    }
+
+    NSString *detailLabel = @"";	
     if (indexPath.section == 0) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
-        NSString *detailLabel;
         if (indexPath.row == 0)
 			detailLabel = self.selectedYear;
 		else if (indexPath.row == 1)
@@ -201,13 +199,13 @@
             detailLabel = self.selectedVin;
 		else if (indexPath.row == 4)
 			detailLabel = self.selectedTransmission;
-            
-        cell.detailTextLabel.text = detailLabel;
     } else if (indexPath.section == 1) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
         cell.textLabel.text = [options objectAtIndex:indexPath.row];
     }
     
 	cell.textLabel.textColor = [UIColor purpleColor];
+    cell.detailTextLabel.text = detailLabel;
 
     return cell;
 }

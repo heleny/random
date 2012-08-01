@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TradeApp/VehicleInfoViewController.m"
-         timestampString = "365551148.332466"
+         timestampString = "365551772.98643"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "343"
-         endingLineNumber = "343"
+         startingLineNumber = "341"
+         endingLineNumber = "341"
          landmarkName = "-actionPickerDone:"
          landmarkType = "5">
       </FileBreakpoint>
