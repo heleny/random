@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Vehicle Info";
+    self.title = @"Customized Radio Buttons";
     
     if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
     {

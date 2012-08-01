@@ -21,7 +21,7 @@
 
 @implementation VehicleInfoViewController
 
-@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission, currentActivePicker, vins = _vins, vinPicker = _vinPicker, selectedVin = _selectedVin;
+@synthesize disclosures, options, years, makes, models, transmissions, yearPicker, makePicker, modelPicker, transmissionPicker, selectedIndex, masterView, selectedYear, selectedMake, selectedModel, selectedTransmission, currentActivePicker, vins = _vins, vinPicker = _vinPicker, selectedVin = _selectedVin, vehicleInfo = _vehicleInfo;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,6 +35,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    pthread_mutex_t mutex;
+    pthread_mutex_lock(&mutex);
+    // do something
+    pthread_mutex_unlock(&mutex);
+    
+    NSLock *theLock = [[NSLock alloc] init];
+    [theLock lock];
+    if ([theLock tryLock]) {
+        // do something
+        [theLock unlock];
+    }
+    
+    @synchronized([NSThread currentThread]) {
+        
+    }
     
 //    NSLog(@"Screen size (width, height) = (%f, %f)", [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
 
@@ -104,7 +120,6 @@
     self.transmissionPicker.delegate = self;
     self.transmissionPicker.frame = rect;
     self.transmissionPicker.showsSelectionIndicator = YES;
-    
 }
 
 - (void)viewDidUnload
@@ -128,6 +143,7 @@
     self.vins = nil;
     self.vinPicker = nil;
     self.selectedVin = nil;
+    self.vehicleInfo = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -167,9 +183,9 @@
     UILabel *secondaryLabel;
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        
+        if (indexPath.section == 0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
         secondaryLabel = [[UILabel alloc] init];
         secondaryLabel.textAlignment = UITextAlignmentRight;
         secondaryLabel.backgroundColor = [UIColor clearColor];
@@ -180,7 +196,6 @@
 	
     if (indexPath.section == 0) {
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
-        
         secondaryLabel = (UILabel *)[cell.contentView viewWithTag:123];
         secondaryLabel.frame = CGRectMake(cell.frame.size.width - 220, cell.textLabel.frame.origin.y, 180, cell.textLabel.frame.size.height);
         if (indexPath.row == 0)

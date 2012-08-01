@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VehicleInfo.h"
 
 @interface VehicleInfoViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -26,6 +27,8 @@
 @property (nonatomic, strong) UIPickerView *currentActivePicker;
 @property int selectedIndex;
 @property (nonatomic, strong) UIView *masterView;
+
+@property (nonatomic, strong) VehicleInfo *vehicleInfo;
 
 - (CGSize)viewSize;
 

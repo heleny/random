@@ -16,6 +16,7 @@
 #import "RadioButtonsViewController.h"
 #import "VehicleInfoViewController.h"
 #import "SellAndBuyViewController.h"
+#import "ImageViewController.h"
 
 @interface RearViewController ()
 
@@ -38,7 +39,7 @@
 {
     [super viewDidLoad];
 
-    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", nil];
+    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Customized Radio Buttons", @"Images", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -170,52 +171,41 @@
         }
     }
 	// ... and the second row (=1) corresponds to the "MapViewController".
-	else if (indexPath.row == 1)
-	{
+	else if (indexPath.row == 1) {
         NSLog(@"Closing is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
-		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ClosingViewController class]])
-		{
+		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ClosingViewController class]]) {
 			ClosingViewController *closingViewController = [[ClosingViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:closingViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
-		else
-		{
+        else {
 			[tradeAppViewController revealToggle:self];
 		}
 	}
-	else if (indexPath.row == 2)
-	{
-		
+	else if (indexPath.row == 2) {
         NSLog(@"Won is clicked");
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
-		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[WonViewController class]])
-		{
+		if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[WonViewController class]]) {
 			WonViewController *wonViewController = [[WonViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:wonViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
 		// Seems the user attempts to 'switch' to exactly the same controller he came from!
-		else
-		{
+		else {
 			[tradeAppViewController revealToggle:self];
 		}
 	}
     else if (indexPath.row == 3) {
         NSLog(@"Sell & Buy is clicked");
-        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[SellAndBuyViewController class]])
-		{
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[SellAndBuyViewController class]]) {
 			SellAndBuyViewController *sellAndBuyViewController = [[SellAndBuyViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:sellAndBuyViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
-		else
-		{
+		else {
 			[tradeAppViewController revealToggle:self];
 		}
-        
-        
     }
 
     else if (indexPath.row == 4) {
@@ -229,21 +219,38 @@
 //		}
         
         //VehicleInfoViewController
-        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[VehicleInfoViewController class]])
-		{
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[VehicleInfoViewController class]]) {
 			VehicleInfoViewController *vehicleInfoViewController = [[VehicleInfoViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vehicleInfoViewController];
 			[tradeAppViewController setFrontViewController:navigationController animated:NO];
 		}
-		else
-		{
+		else {
 			[tradeAppViewController revealToggle:self];
 		}
-
-        
     }
-	else if (indexPath.row == 4)
-	{
+    else if (indexPath.row == 5) {
+        NSLog(@"Customized Radio Buttons is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]]) {
+			RadioButtonsViewController *radioButtonsViewController = [[RadioButtonsViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:radioButtonsViewController];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else {
+			[tradeAppViewController revealToggle:self];
+		}
+    }
+    else if (indexPath.row == 6) {
+        NSLog(@"Customized Radio Buttons is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ImageViewController class]]) {
+			ImageViewController *imageViewController = [[ImageViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else {
+			[tradeAppViewController revealToggle:self];
+		}
+    }
+	else if (indexPath.row == 7) {
 		[tradeAppViewController showFrontViewCompletely:NO];
 	}
 }
