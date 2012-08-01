@@ -29,9 +29,21 @@
 {
     [super viewDidLoad];
     
+    /*
+      TODO:
+      - add spinner while fetching remote image
+      - add image cache
+    */
+    
     NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+//    [NSURLConnection sendAsynchronousRequest:req queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
+//        if ([data length] > 0 && error == nil) {
+//            [self dataReceived:data];
+//        }
+//    }];
+    
     NSLog(@"Received %d bytes", [data length]);
     [req setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
     [[NSURLCache sharedURLCache] setMemoryCapacity:1024*1024*10];
@@ -54,6 +66,7 @@
 		
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Reveal") style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
     }
+
 
 }
 
