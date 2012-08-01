@@ -35,20 +35,21 @@
       - add image cache
     */
     
-    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+//    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
+//    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
 //    [NSURLConnection sendAsynchronousRequest:req queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
 //        if ([data length] > 0 && error == nil) {
 //            [self dataReceived:data];
 //        }
 //    }];
     
-    NSLog(@"Received %d bytes", [data length]);
-    [req setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
-    [[NSURLCache sharedURLCache] setMemoryCapacity:1024*1024*10];
+//    NSLog(@"Received %d bytes", [data length]);
+//    [req setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
+//    [[NSURLCache sharedURLCache] setMemoryCapacity:1024*1024*10];
         
-    UIImage *image = [UIImage imageWithData:data];
+//    UIImage *image = [UIImage imageWithData:data];
+    UIImage *image = [UIImage imageNamed:@"mother-and-child.jpg"];
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     scrollView.contentSize = image.size;
     scrollView.delegate = self;

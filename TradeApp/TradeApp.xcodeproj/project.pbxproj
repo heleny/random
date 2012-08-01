@@ -29,8 +29,8 @@
 		7963B7CD15C8748100329235 /* VehicleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7963B7CC15C8748100329235 /* VehicleInfo.m */; };
 		7963B7CF15C8843C00329235 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7963B7CE15C8843C00329235 /* CoreData.framework */; };
 		79715DDE15A348BE005DD8C8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 79715DDD15A348BE005DD8C8 /* logo.png */; };
+		7995B44115C9E4C800628256 /* mother-and-child.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7995B44015C9E4C800628256 /* mother-and-child.jpg */; };
 		7996313715A38E7500111E53 /* ActiveTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996313615A38E7500111E53 /* ActiveTabBarController.m */; };
-		79B18BEF15C9802900B7839C /* Giants.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79B18BEE15C9802900B7839C /* Giants.jpg */; };
 		79B18BF315C9806C00B7839C /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B18BF215C9806C00B7839C /* ImageViewController.m */; };
 		79B6608415C31BF100054339 /* SellAndBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6608315C31BF100054339 /* SellAndBuyViewController.m */; };
 		79B6609815C330EE00054339 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6609715C330EE00054339 /* SellViewController.m */; };
@@ -78,9 +78,9 @@
 		7963B7CC15C8748100329235 /* VehicleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleInfo.m; sourceTree = "<group>"; };
 		7963B7CE15C8843C00329235 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		79715DDD15A348BE005DD8C8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7995B44015C9E4C800628256 /* mother-and-child.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mother-and-child.jpg"; sourceTree = "<group>"; };
 		7996313515A38E7500111E53 /* ActiveTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveTabBarController.h; sourceTree = "<group>"; };
 		7996313615A38E7500111E53 /* ActiveTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveTabBarController.m; sourceTree = "<group>"; };
-		79B18BEE15C9802900B7839C /* Giants.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Giants.jpg; sourceTree = "<group>"; };
 		79B18BF115C9806C00B7839C /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		79B18BF215C9806C00B7839C /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		79B6608215C31BF100054339 /* SellAndBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellAndBuyViewController.h; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		79C55B0615A339CD0038A5E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				79B18BEE15C9802900B7839C /* Giants.jpg */,
+				7995B44015C9E4C800628256 /* mother-and-child.jpg */,
 				7932707B15C2F878002A85C0 /* radio-off.png */,
 				7932707C15C2F878002A85C0 /* radio-on.png */,
 				79715DDD15A348BE005DD8C8 /* logo.png */,
@@ -269,7 +269,7 @@
 				79715DDE15A348BE005DD8C8 /* logo.png in Resources */,
 				7932707D15C2F878002A85C0 /* radio-off.png in Resources */,
 				7932707E15C2F878002A85C0 /* radio-on.png in Resources */,
-				79B18BEF15C9802900B7839C /* Giants.jpg in Resources */,
+				7995B44115C9E4C800628256 /* mother-and-child.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

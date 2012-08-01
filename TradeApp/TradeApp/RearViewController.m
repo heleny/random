@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
 
-    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Customized Radio Buttons", @"Images", nil];
+    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Radio Buttons", @"Images", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -209,7 +209,7 @@
     }
 
     else if (indexPath.row == 4) {
-        NSLog(@"VehicleInfo is clicked");
+        NSLog(@"Vehicle Info is clicked");
         // RadioButtonsViewController
 //        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]])
 //		{
@@ -229,7 +229,7 @@
 		}
     }
     else if (indexPath.row == 5) {
-        NSLog(@"Customized Radio Buttons is clicked");
+        NSLog(@"Radio Buttons is clicked");
         if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[RadioButtonsViewController class]]) {
 			RadioButtonsViewController *radioButtonsViewController = [[RadioButtonsViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:radioButtonsViewController];
@@ -240,7 +240,7 @@
 		}
     }
     else if (indexPath.row == 6) {
-        NSLog(@"Customized Radio Buttons is clicked");
+        NSLog(@"Image is clicked");
         if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[ImageViewController class]]) {
 			ImageViewController *imageViewController = [[ImageViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imageViewController];

@@ -27,7 +27,6 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -35,22 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    pthread_mutex_t mutex;
-    pthread_mutex_lock(&mutex);
-    // do something
-    pthread_mutex_unlock(&mutex);
-    
-    NSLock *theLock = [[NSLock alloc] init];
-    [theLock lock];
-    if ([theLock tryLock]) {
-        // do something
-        [theLock unlock];
-    }
-    
-    @synchronized([NSThread currentThread]) {
-        
-    }
     
 //    NSLog(@"Screen size (width, height) = (%f, %f)", [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
 
@@ -74,7 +57,7 @@
     
     years = [NSMutableArray arrayWithObjects:@"2012", @"2011", @"2010", @"2009", @"2008", @"2007", @"2006", @"2005", @"2004", @"2003", @"2002", @"2001", @"2000", @"1999", @"1998", @"1997",nil];
     makes = [NSMutableArray arrayWithObjects:@"Acura", @"Audi", @"BMW", @"Chevrolet", @"Chrysler", @"Ford", @"Honda", @"Hyundai", @"Jeep", @"Mazda", @"Mercedes-Benz", @"Nissan", @"Porsche", @"Saturn", @"Subaru", @"Toyota", @"Volkswagen", @"Volvo", nil];
-    models = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", @"D", @"E", @"F", nil];
+    models = [NSMutableArray arrayWithObjects:@"GM Buick", @"GM GMC", @"VW Scania", @"Toyota Lexus", @"Ford Troller", @"Nissan Infinity", @"BMW NINI", @"Audi Allroad", @"Honda Prelude", @"Mercedes-Benz C300 Luxury", nil];
     self.vins = [NSMutableArray arrayWithObjects:@"1GAHG39R621205085", @"4F2YZ92Z16KM21800", @"WVWEU73C16P133410", @"WDBKK49F01F178716", @"KNDJD736675665533", @"5GRGN23U03H141049", @"6MMAP87P43T010508", @"JHMFA36236S011166", @"KNDJD733855415827", @"WVWAK73C56P166477", nil];
     transmissions = [NSMutableArray arrayWithObjects:@"Automatic", @"Hybrid", @"Manual", nil];
 
