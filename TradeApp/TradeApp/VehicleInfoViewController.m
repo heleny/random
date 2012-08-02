@@ -185,6 +185,12 @@
     } else if (indexPath.section == 1) {
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.textLabel.text = [options objectAtIndex:indexPath.row];
+		
+		UISwitch *uiSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+		cell.accessoryView = uiSwitch;
+		[uiSwitch setOn:NO animated:NO];
+		[uiSwitch addTarget:self action:@selector(switchChange:) forControlEvents:UIControlEventValueChanged];
+	
     }
     
 	cell.textLabel.textColor = [UIColor purpleColor];
@@ -339,6 +345,12 @@
     }
 
     [self.tableView reloadData];
+}
+
+- (void)switchChange:(id) sender
+{
+	UISwitch *uiSwitch = (UISwitch *) sender;
+	NSLog(@"The switch is %@", uiSwitch.on ? @"ON" : @"OFF");
 }
 
 @end
