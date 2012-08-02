@@ -1,1 +1,19 @@
 http://code.google.com/p/cookbooksamples/downloads/list
+iphone/ipod: 320x480/640x960 (@2x)
+
+ipad: 768x1004/1536x2008(@2x)
+
+
+
+http://mobiledevelopertips.com/
+
+
+ security:
+intitle:"index of/" filetype:mp3 "coldplay"
+http://www.exploit-db.com/
+http://johnny.ihackstuff.com/
+http://www.hackersforcharity.org/
+
+http://bugmenot.com/
+
+http://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf

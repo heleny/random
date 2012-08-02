@@ -25,25 +25,16 @@
 	
 	RearViewController *rearViewController = [[RearViewController alloc] init];
 	
-	// FrontViewController
-//	FrontViewController *frontViewController = [[FrontViewController alloc] init];
-//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-
-	// ActiveViewController
 	ActiveViewController *activeViewController = [[ActiveViewController alloc] init];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeViewController];
-    
-    // ActiveTabBarController
-//	ActiveTabBarController *activeTabBarController = [[ActiveTabBarController alloc] init];
-//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:activeTabBarController];
 	
 	TradeAppViewController *tradeAppViewController = [[TradeAppViewController alloc] initWithFrontViewController:navigationController rearViewController:rearViewController];
 	self.viewController = tradeAppViewController;
 	
-	self.window.rootViewController = self.viewController;
-	[self.window makeKeyAndVisible];
-	return YES;
+    self.window.rootViewController = self.viewController;
+   	[self.window makeKeyAndVisible];
 
+	return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -72,6 +63,5 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end
