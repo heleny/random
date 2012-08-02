@@ -170,7 +170,8 @@
 
     NSString *detailLabel = @"";	
     if (indexPath.section == 0) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
         if (indexPath.row == 0)
 			detailLabel = self.selectedYear;
@@ -182,8 +183,11 @@
             detailLabel = self.selectedVin;
 		else if (indexPath.row == 4)
 			detailLabel = self.selectedTransmission;
+            
+        cell.accessoryView = nil;
     } else if (indexPath.section == 1) {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+//        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.text = [options objectAtIndex:indexPath.row];
 		
 		UISwitch *uiSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
