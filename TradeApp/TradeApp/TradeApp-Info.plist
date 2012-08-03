@@ -15,6 +15,7 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>logo.png</string>
+				<string>Default.png</string>
 			</array>
 		</dict>
 	</dict>

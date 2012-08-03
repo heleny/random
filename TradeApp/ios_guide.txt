@@ -14,6 +14,15 @@ http://www.exploit-db.com/
 http://johnny.ihackstuff.com/
 http://www.hackersforcharity.org/
 
-http://bugmenot.com/
+http://bugmenot.com/  don't want to sign up
+http://mailinator.com/  fake mailbox
 
 http://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf
+
+http://zbar.sourceforge.net/iphone/sdkdoc/install.html  libzbar.a
+
+ZBarSDK:  http://zbar.sourceforge.net/download.html
+
+
+https://github.com/crittercism/Crittercism-SDK
+crittercismSDK

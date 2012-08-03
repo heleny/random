@@ -20,6 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *deviceId = [[UIDevice currentDevice] uniqueIdentifier];
+    NSLog(@"***** device UDID: %@", deviceId);
+    
+    NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
+    NSLog(@"***** Settings.username = %@", [pref stringForKey:@"SETTING_USERNAME"]);
+    NSLog(@"***** Settings.password = %@", [pref stringForKey:@"SETTING_PASSWORD"]);
+    
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window = window;
 	
