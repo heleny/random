@@ -20,8 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *deviceId = [[UIDevice currentDevice] uniqueIdentifier];
-    NSLog(@"***** device UDID: %@", deviceId);
+    if ([[UIDevice currentDevice] userInterfaceIdiom]  == UIUserInterfaceIdiomPhone) {
+        NSLog(@"***** User is using an iPhone.");
+    } else {
+        NSLog(@"***** User is using an iPad.");
+    }
+//    NSString *deviceId = [[UIDevice currentDevice] uniqueIdentifier];
+//    NSLog(@"***** device UDID: %@", deviceId);
     
     NSUserDefaults *pref = [NSUserDefaults standardUserDefaults];
     NSLog(@"***** Settings.username = %@", [pref stringForKey:@"SETTING_USERNAME"]);

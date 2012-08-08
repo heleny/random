@@ -173,16 +173,16 @@
 //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
         cell.textLabel.text = [disclosures objectAtIndex:indexPath.row];
-        if (indexPath.row == 0)
-			detailLabel = self.selectedYear;
+        if (indexPath.row == 0) 
+			detailLabel = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedYear"];
 		else if (indexPath.row == 1)
-			detailLabel = self.selectedMake;
+			detailLabel = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedMake"];
 		else if (indexPath.row == 2)
-			detailLabel = self.selectedModel;
+			detailLabel = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedModel"];
         else if (indexPath.row == 3)
-            detailLabel = self.selectedVin;
+            detailLabel = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedVin"];
 		else if (indexPath.row == 4)
-			detailLabel = self.selectedTransmission;
+			detailLabel = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedTransmission"];
             
         cell.accessoryView = nil;
     } else if (indexPath.section == 1) {
@@ -331,21 +331,27 @@
 
 - (void)actionPickerDone: (id) sender
 {
+
     [self.masterView removeFromSuperview];
 	if (self.currentActivePicker == self.yearPicker) {
     	self.selectedYear = [self.years objectAtIndex:[self.yearPicker selectedRowInComponent:0]];
+        [[NSUserDefaults standardUserDefaults] setObject:self.selectedYear forKey:@"selectedYear"];
     }
 	else if (self.currentActivePicker == self.makePicker) {
 		self.selectedMake = [self.makes objectAtIndex:[self.makePicker selectedRowInComponent:0]];
+        [[NSUserDefaults standardUserDefaults] setObject:self.selectedMake forKey:@"selectedMake"];
     }
 	else if (self.currentActivePicker == self.modelPicker) {
 		self.selectedModel = [self.models objectAtIndex:[self.modelPicker selectedRowInComponent:0]];
+        [[NSUserDefaults standardUserDefaults] setObject:self.selectedModel forKey:@"selectedModel"];
     }
 	else if (self.currentActivePicker == self.transmissionPicker) {
 		self.selectedTransmission = [self.transmissions objectAtIndex:[self.transmissionPicker selectedRowInComponent:0]];
+        [[NSUserDefaults standardUserDefaults] setObject:self.selectedTransmission forKey:@"selectedTransmission"];
     }
     else if (self.currentActivePicker == self.vinPicker) {
 		self.selectedVin = [self.vins objectAtIndex:[self.vinPicker selectedRowInComponent:0]];
+        [[NSUserDefaults standardUserDefaults] setObject:self.selectedVin forKey:@"selectedVin"];
     }
 
     [self.tableView reloadData];
