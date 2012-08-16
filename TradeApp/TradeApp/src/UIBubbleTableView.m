@@ -72,15 +72,6 @@
     return self;
 }
 
-
-- (void)dealloc
-{
-    [_bubbleDictionary release];
-	_bubbleDictionary = nil;
-	_bubbleDataSource = nil;
-    [super dealloc];
-}
-
 #pragma mark - Override
 
 - (void)reloadData
@@ -92,8 +83,8 @@
     int count = 0;
     if (self.bubbleDataSource && (count = [self.bubbleDataSource rowsForBubbleTable:self]) > 0)
     {        
-        self.bubbleDictionary = [[[NSMutableDictionary alloc] init] autorelease];
-        NSMutableArray *bubbleData = [[[NSMutableArray alloc] initWithCapacity:count] autorelease];
+        self.bubbleDictionary = [[NSMutableDictionary alloc] init];
+        NSMutableArray *bubbleData = [[NSMutableArray alloc] initWithCapacity:count];
         
         for (int i = 0; i < count; i++)
         {
@@ -120,7 +111,7 @@
         
         for (int i = 0; i < count; i++)
         {
-            NSBubbleDataInternal *dataInternal = [[[NSBubbleDataInternal alloc] init] autorelease];
+            NSBubbleDataInternal *dataInternal = [[NSBubbleDataInternal alloc] init];
             dataInternal.data = (NSBubbleData *)[bubbleData objectAtIndex:i];
             
             // Calculating cell height
@@ -132,7 +123,7 @@
             
             if ([dataInternal.data.date timeIntervalSinceDate:last] > self.snapInterval)
             {
-                currentSection = [[[NSMutableArray alloc] init] autorelease];
+                currentSection = [[NSMutableArray alloc] init];
                 [self.bubbleDictionary setObject:currentSection forKey:[NSString stringWithFormat:@"%d",i]];
                 dataInternal.header = [dateFormatter stringFromDate:dataInternal.data.date];
                 dataInternal.height += 30;
@@ -142,7 +133,6 @@
             last = dataInternal.data.date;
         }
         
-        [dateFormatter release];
     }
     
     [super reloadData];

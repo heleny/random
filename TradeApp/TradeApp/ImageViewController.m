@@ -7,6 +7,7 @@
 //
 
 #import "ImageViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ImageViewController ()
 @property (nonatomic, strong) UIImageView *imageView;
@@ -35,28 +36,55 @@
       - add image cache
     */
     
-//    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
-//    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-//    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
-//    [NSURLConnection sendAsynchronousRequest:req queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
+   //    [NSURLConnection sendAsynchronousRequest:req queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *resp, NSData *data, NSError *error) {
 //        if ([data length] > 0 && error == nil) {
 //            [self dataReceived:data];
 //        }
 //    }];
     
+    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
+//    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
+//
 //    NSLog(@"Received %d bytes", [data length]);
 //    [req setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
 //    [[NSURLCache sharedURLCache] setMemoryCapacity:1024*1024*10];
-        
+//        
 //    UIImage *image = [UIImage imageWithData:data];
-    UIImage *image = [UIImage imageNamed:@"mother-and-child.jpg"];
+
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
+//    scrollView.contentSize = image.size;
+//    scrollView.delegate = self;
+//    [scrollView setScrollEnabled:YES];
+//    [scrollView setMaximumZoomScale:0.5];
+//    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+//    self.imageView.image = image;
+//    [scrollView addSubview:self.imageView];
+//    [self.view addSubview:scrollView];
+
+    // using AFNetworking for downloading image
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
-    scrollView.contentSize = image.size;
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [self.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"splash.png"]];
+//    [self.imageView setImageWithURLRequest:[NSURL URLWithString:url]
+//                          placeholderImage:[UIImage imageNamed:@"splash.png"]
+//                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image){
+//                              NSLog(@"********* Load image successfully.");
+//                              scrollView.contentSize = image.size;
+//                              self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+//                              
+//                          }
+//                          failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
+//                              NSLog(@"********* error: failed to load image.");
+//                          }
+//    ];
+
+    self.imageView.frame = CGRectMake(0, 0, self.imageView.image.size.width, self.imageView.image.size.height);
+    scrollView.contentSize = self.imageView.image.size;
     scrollView.delegate = self;
     [scrollView setScrollEnabled:YES];
     [scrollView setMaximumZoomScale:0.5];
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
-    self.imageView.image = image;
+
     [scrollView addSubview:self.imageView];
     [self.view addSubview:scrollView];
     

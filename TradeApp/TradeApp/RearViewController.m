@@ -17,6 +17,7 @@
 #import "VehicleInfoViewController.h"
 #import "SellAndBuyViewController.h"
 #import "ImageViewController.h"
+#import "LiveChatViewController.h"
 
 @interface RearViewController ()
 
@@ -39,7 +40,7 @@
 {
     [super viewDidLoad];
 
-    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Radio Buttons", @"Images", nil];
+    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Radio Buttons", @"Images", @"Live Chat", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -250,7 +251,22 @@
 			[tradeAppViewController revealToggle:self];
 		}
     }
-	else if (indexPath.row == 7) {
+    else if (indexPath.row == 7) {
+        NSLog(@"Live Chat is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[LiveChatViewController class]]) {
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LiveChat" bundle: nil];
+            LiveChatViewController *liveChatViewController = [storyboard instantiateInitialViewController];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:liveChatViewController];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else {
+			[tradeAppViewController revealToggle:self];
+		}
+
+        
+    }
+	else if (indexPath.row == 8) {
 		[tradeAppViewController showFrontViewCompletely:NO];
 	}
 }
