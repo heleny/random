@@ -44,7 +44,7 @@
 //    }];
     
 //    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
-    NSString *url = @"http://farm1.staticflickr.com/196/475048208_c94a81b8c3.jpg";
+    NSString *url = @"http://farm1.staticflickr.com/196/475048208_c94a81b8c3_b.jpg";
 //    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
 //    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
 //
