@@ -43,7 +43,8 @@
 //        }
 //    }];
     
-    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
+//    NSString *url = @"http://farm4.staticflickr.com/3598/3551599565_db282cf840_o.jpg";
+    NSString *url = @"http://farm1.staticflickr.com/196/475048208_c94a81b8c3.jpg";
 //    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
 //    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
 //
@@ -77,8 +78,6 @@
         self.overlay.progress = 1.0;
         [self.overlay postFinishMessage:@"Image is loaded successfully." duration:3.0 animated:YES];
     }
-
-    
     
 //    [self.imageView setImageWithURLRequest:[NSURL URLWithString:url]
 //                          placeholderImage:[UIImage imageNamed:@"splash.png"]
