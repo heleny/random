@@ -11,11 +11,12 @@
 
 @interface ImageViewController ()
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, weak) MTStatusBarOverlay *overlay;
 @end
 
 @implementation ImageViewController
 
-@synthesize imageView = _imageView;
+@synthesize imageView = _imageView, overlay = _overlay;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,6 +67,19 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [self.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"splash.png"]];
+    if (self.overlay == nil) {
+        self.overlay = [MTStatusBarOverlay sharedInstance];
+        self.overlay.animation = MTStatusBarOverlayAnimationFallDown;
+        self.overlay.detailViewMode = MTDetailViewModeHistory;
+        self.overlay.delegate = self;
+        self.overlay.progress = 0.0;
+        [self.overlay postMessage:@"Loading image..."];
+        self.overlay.progress = 1.0;
+        [self.overlay postFinishMessage:@"Image is loaded successfully." duration:3.0 animated:YES];
+    }
+
+    
+    
 //    [self.imageView setImageWithURLRequest:[NSURL URLWithString:url]
 //                          placeholderImage:[UIImage imageNamed:@"splash.png"]
 //                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image){
@@ -104,6 +118,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.imageView = nil;
+    self.overlay = nil;
 }
 
 #pragma mark - UIScrollViewDelegate

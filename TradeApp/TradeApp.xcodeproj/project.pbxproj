@@ -59,6 +59,7 @@
 		79B66EDF15DD8D9F00DFE750 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66ED315DD8D9F00DFE750 /* AFURLConnectionOperation.m */; };
 		79B66EE015DD8D9F00DFE750 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66ED515DD8D9F00DFE750 /* AFXMLRequestOperation.m */; };
 		79B66EE115DD8D9F00DFE750 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66ED715DD8D9F00DFE750 /* UIImageView+AFNetworking.m */; };
+		79B66EF715DEA63900DFE750 /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66EF615DEA63900DFE750 /* MTStatusBarOverlay.m */; };
 		79C55B0815A33A050038A5E9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B0715A33A050038A5E9 /* arrow.png */; };
 		79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */; };
 		79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */; };
@@ -154,6 +155,8 @@
 		79B66ED515DD8D9F00DFE750 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		79B66ED615DD8D9F00DFE750 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		79B66ED715DD8D9F00DFE750 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		79B66EF515DEA63900DFE750 /* MTStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStatusBarOverlay.h; sourceTree = "<group>"; };
+		79B66EF615DEA63900DFE750 /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStatusBarOverlay.m; sourceTree = "<group>"; };
 		79C55B0415A339C10038A5E9 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		79C55B0715A33A050038A5E9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -209,9 +212,10 @@
 		7947FB721595038E0057B816 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				79B66EF415DEA61300DFE750 /* MTStatusBarOverlay */,
 				79B66EC215DD8D9F00DFE750 /* AFNetworking */,
 				79B66E7315DD764600DFE750 /* images */,
-				79B66E7815DD764600DFE750 /* src */,
+				79B66E7815DD764600DFE750 /* BubbleView */,
 				7996313515A38E7500111E53 /* ActiveTabBarController.h */,
 				7996313615A38E7500111E53 /* ActiveTabBarController.m */,
 				27F6AF2E15A0EE3200BBE20E /* ActiveViewController.h */,
@@ -279,7 +283,7 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		79B66E7815DD764600DFE750 /* src */ = {
+		79B66E7815DD764600DFE750 /* BubbleView */ = {
 			isa = PBXGroup;
 			children = (
 				79B66E7915DD764600DFE750 /* NSBubbleData.h */,
@@ -293,6 +297,7 @@
 				79B66E8115DD764600DFE750 /* UIBubbleTableViewCell.xib */,
 				79B66E8215DD764600DFE750 /* UIBubbleTableViewDataSource.h */,
 			);
+			name = BubbleView;
 			path = src;
 			sourceTree = "<group>";
 		};
@@ -322,6 +327,15 @@
 				79B66ED715DD8D9F00DFE750 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		79B66EF415DEA61300DFE750 /* MTStatusBarOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				79B66EF515DEA63900DFE750 /* MTStatusBarOverlay.h */,
+				79B66EF615DEA63900DFE750 /* MTStatusBarOverlay.m */,
+			);
+			name = MTStatusBarOverlay;
 			sourceTree = "<group>";
 		};
 		79C55B0615A339CD0038A5E9 /* Resources */ = {
@@ -450,6 +464,7 @@
 				79B66EDF15DD8D9F00DFE750 /* AFURLConnectionOperation.m in Sources */,
 				79B66EE015DD8D9F00DFE750 /* AFXMLRequestOperation.m in Sources */,
 				79B66EE115DD8D9F00DFE750 /* UIImageView+AFNetworking.m in Sources */,
+				79B66EF715DEA63900DFE750 /* MTStatusBarOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

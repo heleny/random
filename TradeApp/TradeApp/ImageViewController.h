@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTStatusBarOverlay.h"
 
-@interface ImageViewController : UIViewController <UIScrollViewDelegate>
+@interface ImageViewController : UIViewController <UIScrollViewDelegate, MTStatusBarOverlayDelegate>
 
 @end
