@@ -60,6 +60,14 @@
 		79B66EE015DD8D9F00DFE750 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66ED515DD8D9F00DFE750 /* AFXMLRequestOperation.m */; };
 		79B66EE115DD8D9F00DFE750 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66ED715DD8D9F00DFE750 /* UIImageView+AFNetworking.m */; };
 		79B66EF715DEA63900DFE750 /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66EF615DEA63900DFE750 /* MTStatusBarOverlay.m */; };
+		79B66F1A15DEE6A100DFE750 /* CollapsableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66F1415DEE6A100DFE750 /* CollapsableTableView.m */; };
+		79B66F1B15DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66F1615DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.m */; };
+		79B66F1C15DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66F1815DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.m */; };
+		79B66F1F15DEE7C900DFE750 /* CollapsableTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B66F1E15DEE7C800DFE750 /* CollapsableTableViewViewController.m */; };
+		79B66F2C15DEEC1A00DFE750 /* CollapsableTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B66F2B15DEEC1A00DFE750 /* CollapsableTableView.storyboard */; };
+		79B66F3015DEF11000DFE750 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79B66F2D15DEF11000DFE750 /* CollapsableTableViewHeaderViewGrouped.xib */; };
+		79B66F3115DEF11000DFE750 /* CollapsableTableViewHeaderViewPlain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79B66F2E15DEF11000DFE750 /* CollapsableTableViewHeaderViewPlain.xib */; };
+		79B66F3215DEF11000DFE750 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B66F2F15DEF11000DFE750 /* plaintableheader.png */; };
 		79C55B0815A33A050038A5E9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C55B0715A33A050038A5E9 /* arrow.png */; };
 		79C55B0915A33BAF0038A5E9 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */; };
 		79C55B0B15A33BE20038A5E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C55B0A15A33BE20038A5E9 /* QuartzCore.framework */; };
@@ -157,6 +165,19 @@
 		79B66ED715DD8D9F00DFE750 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		79B66EF515DEA63900DFE750 /* MTStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStatusBarOverlay.h; sourceTree = "<group>"; };
 		79B66EF615DEA63900DFE750 /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStatusBarOverlay.m; sourceTree = "<group>"; };
+		79B66F1315DEE6A100DFE750 /* CollapsableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableView.h; sourceTree = "<group>"; };
+		79B66F1415DEE6A100DFE750 /* CollapsableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableView.m; sourceTree = "<group>"; };
+		79B66F1515DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewHeaderViewController.h; sourceTree = "<group>"; };
+		79B66F1615DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewHeaderViewController.m; sourceTree = "<group>"; };
+		79B66F1715DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewTapRecognizer.h; sourceTree = "<group>"; };
+		79B66F1815DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewTapRecognizer.m; sourceTree = "<group>"; };
+		79B66F1915DEE6A100DFE750 /* TapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDelegate.h; sourceTree = "<group>"; };
+		79B66F1D15DEE7C800DFE750 /* CollapsableTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewViewController.h; sourceTree = "<group>"; };
+		79B66F1E15DEE7C800DFE750 /* CollapsableTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewViewController.m; sourceTree = "<group>"; };
+		79B66F2B15DEEC1A00DFE750 /* CollapsableTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollapsableTableView.storyboard; sourceTree = "<group>"; };
+		79B66F2D15DEF11000DFE750 /* CollapsableTableViewHeaderViewGrouped.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewGrouped.xib; sourceTree = "<group>"; };
+		79B66F2E15DEF11000DFE750 /* CollapsableTableViewHeaderViewPlain.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewPlain.xib; sourceTree = "<group>"; };
+		79B66F2F15DEF11000DFE750 /* plaintableheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaintableheader.png; sourceTree = "<group>"; };
 		79C55B0415A339C10038A5E9 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		79C55B0515A339C10038A5E9 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		79C55B0715A33A050038A5E9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -212,6 +233,7 @@
 		7947FB721595038E0057B816 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				79B66F1115DEE66C00DFE750 /* CollapsableTableView */,
 				79B66EF415DEA61300DFE750 /* MTStatusBarOverlay */,
 				79B66EC215DD8D9F00DFE750 /* AFNetworking */,
 				79B66E7315DD764600DFE750 /* images */,
@@ -258,6 +280,9 @@
 				79B66E8D15DD76B500DFE750 /* LiveChatViewController.h */,
 				79B66E8E15DD76B500DFE750 /* LiveChatViewController.m */,
 				79B66E9015DD7A9200DFE750 /* LiveChat.storyboard */,
+				79B66F1D15DEE7C800DFE750 /* CollapsableTableViewViewController.h */,
+				79B66F1E15DEE7C800DFE750 /* CollapsableTableViewViewController.m */,
+				79B66F2B15DEEC1A00DFE750 /* CollapsableTableView.storyboard */,
 			);
 			name = Classes;
 			path = TradeApp;
@@ -338,9 +363,26 @@
 			name = MTStatusBarOverlay;
 			sourceTree = "<group>";
 		};
+		79B66F1115DEE66C00DFE750 /* CollapsableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				79B66F1315DEE6A100DFE750 /* CollapsableTableView.h */,
+				79B66F1415DEE6A100DFE750 /* CollapsableTableView.m */,
+				79B66F1515DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.h */,
+				79B66F1615DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.m */,
+				79B66F1715DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.h */,
+				79B66F1815DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.m */,
+				79B66F1915DEE6A100DFE750 /* TapDelegate.h */,
+			);
+			name = CollapsableTableView;
+			sourceTree = "<group>";
+		};
 		79C55B0615A339CD0038A5E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79B66F2D15DEF11000DFE750 /* CollapsableTableViewHeaderViewGrouped.xib */,
+				79B66F2E15DEF11000DFE750 /* CollapsableTableViewHeaderViewPlain.xib */,
+				79B66F2F15DEF11000DFE750 /* plaintableheader.png */,
 				7995B44F15CAE28E00628256 /* Default.png */,
 				7995B44D15CAE14600628256 /* splash.png */,
 				7932707B15C2F878002A85C0 /* radio-off.png */,
@@ -419,6 +461,10 @@
 				79B66E8615DD764600DFE750 /* bubbleSomeone@2x.png in Resources */,
 				79B66E8B15DD764600DFE750 /* UIBubbleTableViewCell.xib in Resources */,
 				79B66E9115DD7A9200DFE750 /* LiveChat.storyboard in Resources */,
+				79B66F2C15DEEC1A00DFE750 /* CollapsableTableView.storyboard in Resources */,
+				79B66F3015DEF11000DFE750 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */,
+				79B66F3115DEF11000DFE750 /* CollapsableTableViewHeaderViewPlain.xib in Resources */,
+				79B66F3215DEF11000DFE750 /* plaintableheader.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +511,10 @@
 				79B66EE015DD8D9F00DFE750 /* AFXMLRequestOperation.m in Sources */,
 				79B66EE115DD8D9F00DFE750 /* UIImageView+AFNetworking.m in Sources */,
 				79B66EF715DEA63900DFE750 /* MTStatusBarOverlay.m in Sources */,
+				79B66F1A15DEE6A100DFE750 /* CollapsableTableView.m in Sources */,
+				79B66F1B15DEE6A100DFE750 /* CollapsableTableViewHeaderViewController.m in Sources */,
+				79B66F1C15DEE6A100DFE750 /* CollapsableTableViewTapRecognizer.m in Sources */,
+				79B66F1F15DEE7C900DFE750 /* CollapsableTableViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

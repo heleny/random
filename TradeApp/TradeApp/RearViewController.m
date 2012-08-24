@@ -18,6 +18,7 @@
 #import "SellAndBuyViewController.h"
 #import "ImageViewController.h"
 #import "LiveChatViewController.h"
+#import "CollapsableTableViewViewController.h"
 
 @interface RearViewController ()
 
@@ -40,7 +41,7 @@
 {
     [super viewDidLoad];
 
-    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Radio Buttons", @"Images", @"Live Chat", nil];
+    self.states = [NSArray arrayWithObjects:@"Active", @"Closing", @"Won", @"Buy & Sell", @"Vehicle Info", @"Radio Buttons", @"Images", @"Live Chat", @"CollapsableTableView", nil];
 	self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
 	
 }
@@ -263,10 +264,21 @@
 		else {
 			[tradeAppViewController revealToggle:self];
 		}
-
-        
     }
-	else if (indexPath.row == 8) {
+    else if (indexPath.row == 8) {
+        NSLog(@"CollapsableTableView is clicked");
+        if ([tradeAppViewController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)tradeAppViewController.frontViewController).topViewController isKindOfClass:[CollapsableTableViewViewController class]]) {
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CollapsableTableView" bundle: nil];
+            CollapsableTableViewViewController *collapsableTableView = [storyboard instantiateInitialViewController];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:collapsableTableView];
+			[tradeAppViewController setFrontViewController:navigationController animated:NO];
+		}
+		else {
+			[tradeAppViewController revealToggle:self];
+		}
+    }
+	else if (indexPath.row == 9) {
 		[tradeAppViewController showFrontViewCompletely:NO];
 	}
 }
